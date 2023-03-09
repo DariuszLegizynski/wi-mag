@@ -1,15 +1,20 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <AboutUs />
+  <Team />
+  <CompanyHistory />
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+<script>
+import AboutUs from '@/components/about/AboutUs'
+import Team from '@/components/about/Team'
+import CompanyHistory from '@/components/about/CompanyHistory'
+
+export default {
+  name: 'App',
+  components: {
+    AboutUs,
+    Team,
+    CompanyHistory,
   }
 }
-</style>
+</script>

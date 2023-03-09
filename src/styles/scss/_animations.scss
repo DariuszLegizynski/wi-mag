@@ -1,0 +1,100 @@
+.fade-in-bg {
+  transition: background-color 250ms ease-in;
+}
+
+.fadeInFromLeft {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  position: relative;
+  animation: fadeInFromLeft 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInFromLeft {
+  from {
+    right: 100%;
+    opacity: 0;
+  }
+  to {
+    right: 0rem;
+    opacity: 1;
+  }
+}
+
+.fadeInFromRight {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  position: relative;
+  animation: fadeInFromRight 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInFromRight {
+  from {
+    left: 100%;
+    opacity: 0;
+  }
+  to {
+    left: 20%;
+    opacity: 1;
+  }
+}
+
+.slideIn {
+  animation: slide-in 0.5s forwards;
+  -webkit-animation: slide-in 0.5s forwards;
+}
+
+.slideOut {
+  animation: slide-out 0.5s forwards;
+  -webkit-animation: slide-out 0.5s forwards;
+}
+
+.fadeInFromBottom {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  position: relative;
+  animation: fadeInFromBottom 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInFromBottom {
+  from {
+    top: 10rem;
+    opacity: 0;
+  }
+  to {
+    top: 0rem;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes slide-in {
+  100% {
+    -webkit-transform: translateX(0%);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@-webkit-keyframes slide-out {
+  0% {
+    -webkit-transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+  }
+}

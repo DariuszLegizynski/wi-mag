@@ -1,0 +1,97 @@
+@import './_variables.scss';
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+
+  &:hover, &:active {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.btn {
+  color: $color-primary;
+  background-color: $color-white;
+  font-family: 'Montserrat-Medium';
+  font-size: $font-size-24;
+  line-height: $line-height-24;
+  padding: 0.9rem;
+  margin: 0.6rem auto;
+  max-width: 16rem;
+  border-radius: 0;
+
+  &--black {
+    color: $color-white;
+    background-color: $color-black;
+  }
+  &--reverse {
+    color: $color-white;
+    background-color: $color-primary;
+  }
+  &--highlight {
+    color: $color-white;
+    background-color: $color-highlight;
+  }
+  &--highlight-reverse {
+    color: $color-highlight;
+    background-color: $color-white;
+    border: 2px solid $color-highlight;
+  }
+  &--back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $font-size-16;
+    line-height: $line-height-16;
+    background-color: inherit;
+  }
+  &--link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem 0;
+    margin: 0;
+    font-size: $font-size-20;
+    line-height: $line-height-20;
+  }
+  &--transparent {
+    background-color: transparent;
+    color: $color-white;
+  }
+}
+
+img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+input,
+textarea {
+  border: none;
+  text-decoration: none;
+  background-color: transparent;
+
+  &::placeholder {
+    color: $color-white;
+    opacity: 1;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+ul,
+li {
+  list-style: none;
+}

@@ -1,0 +1,85 @@
+$color-primary: hsl(240, 90%, 27%);
+$color-primary-light: hsl(204, 91%, 54%);
+$color-primary-dark: hsl(225, 90%, 19%);
+$color-secondary: hsl(225, 100%, 88%);
+$color-tertiary: hsl(225, 100%, 76%);
+
+// $color-highlight: #B48A33;
+$color-highlight: hsl(240, 90%, 27%);
+// $color-highlight: hsl(263, 100%, 79%);
+// $color-highlight: hsl(331, 71%, 56%);
+
+$color-white: hsl(0, 0%, 96%);
+$color-grey-light: hsl(0, 0%, 94%);
+$color-grey: hsla(0, 0%, 0%, 0.15);
+$color-black: hsl(240, 20%, 3%);
+
+$color-border: hsla(0, 0%, 4%, 0.1);
+
+$primary-opacity: hsla(240, 90%, 27%, 0.4);
+$secondary-opacity: hsla(155, 84%, 52%, 0.6);
+$highlight-opacity: hsla(331, 71%, 56%, 0.8);
+$white-opacity: hsla(0, 0%, 96%, 0.6);
+$black-opacity: hsla(240, 20%, 3%, 0.2);
+$black-opacity-dark: hsla(240, 20%, 3%, 0.8);
+
+$gradient-main: linear-gradient(
+  to right bottom,
+  $primary-opacity,
+  $primary-opacity
+);
+
+$gradient-secondary: linear-gradient(
+  to right bottom,
+  $black-opacity,
+  $black-opacity
+);
+
+$font-size-12: 0.6rem;
+$font-size-14: 0.7rem;
+$font-size-16: 0.8rem;
+$font-size-18: 0.9rem;
+$font-size-20: 1rem;
+$font-size-24: 1.2rem;
+$font-size-26: 1.3rem;
+$font-size-28: 1.4rem;
+$font-size-30: 1.5rem;
+$font-size-32: 1.6rem;
+$font-size-34: 1.7rem;
+$font-size-36: 1.8rem;
+$font-size-38: 1.9rem;
+$font-size-40: 2rem;
+$font-size-48: 2.4rem;
+$font-size-56: 2.8rem;
+$font-size-60: 3rem;
+$font-size-62: 3.2rem;
+$font-size-72: 3.6rem;
+
+$letter-spacing-0: 0rem;
+
+$line-height-12: 0.6rem;
+$line-height-14: 0.7rem;
+$line-height-16: 0.8rem;
+$line-height-18: 0.9rem;
+$line-height-20: 1rem;
+$line-height-21: 1.05rem;
+$line-height-24: 1.2rem;
+$line-height-26: 1.3rem;
+$line-height-28: 1.4rem;
+$line-height-30: 1.5rem;
+$line-height-32: 1.6rem;
+$line-height-34: 1.7rem;
+$line-height-36: 1.8rem;
+$line-height-40: 2rem;
+$line-height-44: 2.2rem;
+$line-height-48: 2.4rem;
+$line-height-56: 2.8rem;
+$line-height-60: 3rem;
+$line-height-72: 3.6rem;
+$line-height-84: 4.2rem;
+
+html,
+body {
+  font-size: 20px;
+  font-family: Roboto, sans-serif;
+}

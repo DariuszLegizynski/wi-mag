@@ -1,0 +1,86 @@
+@import './_variables.scss';
+@import './_components.scss';
+@import './animations.scss';
+@import './_fonts.scss';
+
+html,
+body {
+  background-color: $color-secondary;
+  font-family: 'PublicSans-Regular';
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+span {
+  color: $color-white;
+}
+h1, h2, h3, h4 {
+  font-family: 'Montserrat-Light'
+}
+p {
+  font-family: 'Montserrat-Light';
+  letter-spacing: 1px;
+}
+span {
+  font-family: 'Montserrat-Regular';
+}
+h1 {
+  font-size: $font-size-38;
+  line-height: $line-height-44;
+}
+h2 {
+  font-size: $font-size-32;
+  line-height: $line-height-34;
+}
+h3 {
+  font-size: $font-size-20;
+  line-height: $line-height-28;
+}
+h4 {
+  font-size: $font-size-20;
+  line-height: $line-height-24;
+}
+p {
+  font-size: $font-size-20;
+  line-height: $line-height-24;
+}
+i {
+  font-family: 'NotoSerifDisplay-LightItalic';
+}
+span {
+  font-size: $font-size-16;
+  line-height: $line-height-24;
+}
+.sr-only {
+  visibility: hidden;
+  position: absolute;
+  width: 0;
+}
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+									supported by Chrome, Edge, Opera and Firefox */
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+*::selection {
+  background: $color-secondary;
+}
