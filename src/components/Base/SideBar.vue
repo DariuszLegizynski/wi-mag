@@ -1,17 +1,14 @@
-<script>
-export default {
-  props: {
-    isBurgerActive: {
-      type: Boolean,
-      default: false,
-    },
-  },
-  methods: {
-    toggle() {
-      this.$emit("toggle")
-    },
-  },
-}
+<script setup>
+  import { toRefs } from "vue"
+
+  let props = defineProps(['isBurgerActive'])
+  const { isBurgerActive } = toRefs(props)
+
+  const emit = defineEmits(['toggle'])
+
+  const toggle = () => {
+    emit("toggle")
+  }
 </script>
 
 <template>
@@ -23,8 +20,7 @@ export default {
     }"
   >
     <div class="btn sr-only">MENU</div>
-    <button
-      @click="$router.push('/offer'); toggle()"
+    <RouterLink to="/offer" @click="toggle()"
       v-track="{
         category: 'Offer btn clicked',
         label: 'offer btn was clicked',
@@ -32,9 +28,9 @@ export default {
       class="btn"
     >
       OFERTA
-    </button>
-    <button
-      @click="$router.push('/about'); toggle()"
+    </RouterLink>
+    <RouterLink to="/about"
+      @click="toggle()"
       v-track="{
         category: 'About btn clicked',
         label: 'about btn was clicked',
@@ -42,9 +38,9 @@ export default {
       class="btn"
     >
       O FIRMIE
-    </button>
-    <button
-      @click="$router.push('/home#footer'); toggle()"
+    </RouterLink>
+    <RouterLink to="/home#footer"
+      @click="toggle()"
       v-track="{
         category: 'Contact btn clicked',
         label: 'contact btn was clicked',
@@ -52,7 +48,7 @@ export default {
       class="btn btn--highlight"
     >
       KONTAKT
-    </button>
+    </RouterLink>
   </aside>
 </template>
 

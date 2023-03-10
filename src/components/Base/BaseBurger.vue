@@ -1,14 +1,14 @@
-<template>
-  <div class="burger fade-in-bg">
-    <div class="burger__stick" :class="{ active }" />
-  </div>
-</template>
-
 <script setup>
 import { toRefs } from "vue"
   let props = defineProps(['active'])
   const { active } = toRefs(props)
 </script>
+
+<template>
+  <div class="burger fade-in-bg">
+    <div class="burger__stick" :class="{ active }" />
+  </div>
+</template>
 
 <style lang="scss" scoped>
 .burger {
