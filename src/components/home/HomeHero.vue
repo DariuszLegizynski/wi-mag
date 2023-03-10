@@ -8,11 +8,10 @@
         <h1><i>Fachowcy</i> <br />od regałów.</h1>
         <span>
           Maksymalnie wykorzystujemy przestrzeń,<br />
-          optymalizujemy koszta,<br />
+          optymalizujemy koszty,<br />
           zapewniamy najwyszą jakość.
         </span>
       </div>
-      <IconItem :type="'gear'" :height="48" :width="48" />
       <div class="hero__call-to-action">
         <RouterLink
           class="btn btn--highlight"

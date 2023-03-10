@@ -1,3 +1,19 @@
+<script>
+export default {
+  props: {
+    isBurgerActive: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  methods: {
+    toggle() {
+      this.$emit("toggle")
+    },
+  },
+}
+</script>
+
 <template>
   <aside
     class="sideBar fade-in-bg"
@@ -39,22 +55,6 @@
     </button>
   </aside>
 </template>
-
-<script>
-export default {
-  props: {
-    isBurgerActive: {
-      type: Boolean,
-      default: false,
-    },
-  },
-  methods: {
-    toggle() {
-      this.$emit("toggle")
-    },
-  },
-}
-</script>
 
 <style lang="scss" scoped>
 .sideBar {

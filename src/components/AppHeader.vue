@@ -2,13 +2,14 @@
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
 
+import BaseBurger from "@/components/base/BaseBurger.vue"
+import SideBar from "@/components/base/SideBar.vue"
+
 let isBurgerActive = ref(false)
 </script>
 
 <template>
-  <header
-    class="header fade-in-bg"
-  >
+  <header class="header fade-in-bg">
     <RouterLink to="/"
       class="logo"
     >
@@ -34,7 +35,7 @@ let isBurgerActive = ref(false)
     </nav>
     <BaseBurger @click="isBurgerActive = !isBurgerActive" :active="isBurgerActive" />
   </header>
-  <BaseSideBar @toggle="isBurgerActive = !isBurgerActive" :isBurgerActive="isBurgerActive" />
+  <SideBar @toggle="isBurgerActive = !isBurgerActive" :isBurgerActive="isBurgerActive" />
 </template>
 
 <style lang="scss" scoped>
