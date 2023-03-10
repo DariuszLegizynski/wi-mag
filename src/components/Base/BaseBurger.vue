@@ -4,15 +4,10 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    active: {
-      type: Boolean,
-      required: true,
-    },
-  },
-}
+<script setup>
+import { toRefs } from "vue"
+  let props = defineProps(['active'])
+  const { active } = toRefs(props)
 </script>
 
 <style lang="scss" scoped>

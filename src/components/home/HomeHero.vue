@@ -12,6 +12,7 @@
           zapewniamy najwyszą jakość.
         </span>
       </div>
+      <IconItem :type="'gear'" :height="48" :width="48" />
       <div class="hero__call-to-action">
         <RouterLink
           class="btn btn--highlight"

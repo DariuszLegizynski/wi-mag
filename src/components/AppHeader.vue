@@ -1,7 +1,8 @@
 <script setup>
+import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
 
-let isBurgerActive = false
+let isBurgerActive = ref(false)
 </script>
 
 <template>
