@@ -37,8 +37,6 @@ let isBurgerActive = false
 </template>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/_general.scss';
-
 .header {
   display: flex;
   justify-content: space-between;

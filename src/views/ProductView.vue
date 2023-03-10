@@ -71,7 +71,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/styles/scss/_general.scss';
 .product {
   &__title {
     margin: 3rem 0.4rem;

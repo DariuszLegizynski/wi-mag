@@ -1,9 +1,15 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import Hero from '@/components/home/HomeHero.vue'
+// import ProductsPresented from '@/components/home/ProductsPresented.vue'
+// import ProductPros from '@/components/home/ProductPros.vue'
+// import References from '@/components/home/References.vue'
+// import Footer from '@/components/home/Footer.vue'
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <Hero />
+  <!-- <ProductsPresented />
+  <ProductPros />
+  <References />
+  <Footer /> -->
 </template>

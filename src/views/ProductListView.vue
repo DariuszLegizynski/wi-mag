@@ -69,7 +69,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/styles/scss/_general.scss';
 .product-list {
   padding:.4rem;
   &__description {

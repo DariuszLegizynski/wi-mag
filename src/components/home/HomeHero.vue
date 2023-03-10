@@ -31,8 +31,6 @@
 </template>
 
 <style lang="scss" scoped>
-@import '@/styles/scss/_general.scss';
-
 .hero {
   display: grid;
   grid-template-rows: 100vh;

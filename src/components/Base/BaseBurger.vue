@@ -16,8 +16,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/styles/scss/_general.scss';
-
 .burger {
   width: 3rem;
   height: 3rem;

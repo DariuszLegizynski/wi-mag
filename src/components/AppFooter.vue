@@ -41,8 +41,6 @@
 </template>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/_general.scss';
-
 .footer {
   padding-top: 2rem;
   display: grid;

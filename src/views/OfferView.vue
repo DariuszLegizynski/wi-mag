@@ -32,8 +32,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/styles/scss/_general.scss';
-
 .offer {
   background-color: $color-white;
 
