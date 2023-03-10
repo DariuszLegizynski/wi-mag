@@ -55,7 +55,7 @@
         hsla(240, 18%, 3%, 0.8),
         hsla(240, 18%, 3%, 0.7)
       ),
-      url('/images/portrait/ruchindra-gunasekara-GK8x_XCcDZg-unsplash.jpeg');
+      url(https://i.imgur.com/HBKFqmwl.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -204,7 +204,7 @@
       grid-row: 1 / -1;
 
       background-image: none,
-        url('/images/portrait/ruchindra-gunasekara-GK8x_XCcDZg-unsplash.jpeg');
+        url(https://i.imgur.com/HBKFqmwl.jpg);
     }
 
     &__text {
