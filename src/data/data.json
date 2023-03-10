@@ -1,0 +1,301 @@
+{
+  "products": [
+    {
+      "id": 0,
+      "name": "Regał",
+      "product_types": [
+        {
+          "id": 0,
+          "type": "półka metalowa",
+          "type_continued": null,
+          "description": "Skręcane śrubkami najlepszej jakości. Najwyzszą jakość i są super ekstra mega cool.",
+          "thumbnail_image": "/images/landscape/pexels-tiger-lily-4483610.jpeg",
+          "thumbnail_portrait": "/images/portrait/ruchindra-gunasekara-GK8x_XCcDZg-unsplash.jpeg",
+          "product_list": [
+            {
+              "id": 1000,
+              "name": "ciężki",
+              "thumbnail_image": "/images/001/bulk-rack-unit-no-decking_1.jpeg",
+              "image": "/images/001/bulk-rack-unit-no-decking_1.jpeg",
+              "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non possimus asperiores fugit accusamus odio.",
+              "images": [
+                {
+                  "id": 0,
+                  "thumbnail_image": "/images/001/bulk-rack-unit-no-decking_1.jpeg",
+                  "image": "/images/001/bulk-rack-unit-no-decking_1.jpeg"
+                },
+                {
+                  "id": 1,
+                  "thumbnail_image": "/images/001/02-bulk-frame-diagonal.webp",
+                  "image": "/images/001/02-bulk-frame-diagonal.webp"
+                },
+                {
+                  "id": 2,
+                  "thumbnail_image": "/images/001/03-bulk-beam-connection.webp",
+                  "image": "/images/001/03-bulk-beam-connection.webp"
+                },
+                {
+                  "id": 3,
+                  "thumbnail_image": "/images/001/04-bulk-safety-pin.webp",
+                  "image": "/images/001/04-bulk-safety-pin.webp"
+                }
+              ]
+            },
+            {
+              "id": 1001,
+              "name": "metalowy",
+              "thumbnail_image": "/images/002/thumb/mp2_shelving_unit_particle_board_gray_600px.webp",
+              "image": "/images/002/mp2_shelving_unit_particle_board_gray_600px.webp",
+              "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non possimus asperiores fugit accusamus odio.",
+              "images": [
+                {
+                  "id": 0,
+                  "thumbnail_image": "/images/002/thumb/mp2_shelving_unit_particle_board_gray_600px.webp",
+                  "image": "/images/002/mp2_shelving_unit_particle_board_gray_600px.webp"
+                },
+                {
+                  "id": 1,
+                  "thumbnail_image": "/images/002/thumb/mp2_full-unit-blue-and-orange-2_600x600ok.jpeg",
+                  "image": "/images/002/mp2_full-unit-blue-and-orange-2_600x600ok.jpeg"
+                },
+                {
+                  "id": 3,
+                  "thumbnail_image": "/images/002/thumb/mp2_blue-orange_600x600ok.webp",
+                  "image": "/images/002/mp2_blue-orange_600x600ok.jpeg"
+                },
+                {
+                  "id": 4,
+                  "thumbnail_image": "/images/002/thumb/apio6pqhr__94507.1582558796.jpg",
+                  "image": "/images/002/apio6pqhr__94507.1582558796 (1).jpg"
+                }
+              ]
+            },
+            {
+              "id": 1002,
+              "name": "wiórowy",
+              "thumbnail_image": "/images/003/thumb/01-img_6297_rev1_600x600.webp",
+              "image": "/images/003/01-img_6297_rev1_600x600.jpeg",
+              "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non possimus asperiores fugit accusamus odio.",
+              "images": [
+                {
+                  "id": 0,
+                  "thumbnail_image": "/images/003/thumb/01-img_6297_rev1_600x600.webp",
+                  "image": "/images/003/01-img_6297_rev1_600x600.jpeg"
+                },
+                {
+                  "id": 1,
+                  "thumbnail_image": "/images/003/thumb/03-img_6347_rev1_600x600.webp",
+                  "image": "/images/003/03-img_6347_rev1_600x600.jpeg"
+                },
+                {
+                  "id": 2,
+                  "thumbnail_image": "/images/003/thumb/04-img_6419_rev1_600x600.webp",
+                  "image": "/images/003/04-img_6419_rev1_600x600.jpeg"
+                },
+                {
+                  "id": 3,
+                  "thumbnail_image": "/images/003/thumb/usa_boltedpalletracking2.jpeg",
+                  "image": "/images/003/usa_boltedpalletracking2.jpeg"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "type": "półka wiórowa",
+          "type_continued": null,
+          "description": "Mamusia wprowadziła się do domu? Z naszymi produktami i dla niej znajdzie się miejsce.",
+          "thumbnail_image": "/images/landscape/chuttersnap-JWaXthlA9Cc-unsplash.jpeg",
+          "thumbnail_portrait": "/images/portrait/jake-nebov-NmwnjkukM80-unsplash.jpeg",
+          "product_list": [
+            {
+              "id": 3000,
+              "name": "ciężki",
+              "thumbnail_image": "/images/001/bulk-rack-unit-no-decking_1.jpeg",
+              "image": "/images/001/bulk-rack-unit-no-decking_1.jpeg",
+              "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non possimus asperiores fugit accusamus odio.",
+              "images": [
+                {
+                  "id": 0,
+                  "thumbnail_image": "/images/001/bulk-rack-unit-no-decking_1.jpeg",
+                  "image": "/images/001/bulk-rack-unit-no-decking_1.jpeg"
+                },
+                {
+                  "id": 1,
+                  "thumbnail_image": "/images/001/02-bulk-frame-diagonal.webp",
+                  "image": "/images/001/02-bulk-frame-diagonal.webp"
+                },
+                {
+                  "id": 2,
+                  "thumbnail_image": "/images/001/03-bulk-beam-connection.webp",
+                  "image": "/images/001/03-bulk-beam-connection.webp"
+                },
+                {
+                  "id": 3,
+                  "thumbnail_image": "/images/001/04-bulk-safety-pin.webp",
+                  "image": "/images/001/04-bulk-safety-pin.webp"
+                }
+              ]
+            },
+            {
+              "id": 3001,
+              "name": "metalowy",
+              "thumbnail_image": "/images/002/thumb/mp2_shelving_unit_particle_board_gray_600px.webp",
+              "image": "/images/002/mp2_shelving_unit_particle_board_gray_600px.webp",
+              "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non possimus asperiores fugit accusamus odio.",
+              "images": [
+                {
+                  "id": 0,
+                  "thumbnail_image": "/images/002/thumb/mp2_shelving_unit_particle_board_gray_600px.webp",
+                  "image": "/images/002/mp2_shelving_unit_particle_board_gray_600px.webp"
+                },
+                {
+                  "id": 1,
+                  "thumbnail_image": "/images/002/thumb/mp2_full-unit-blue-and-orange-2_600x600ok.jpeg",
+                  "image": "/images/002/mp2_full-unit-blue-and-orange-2_600x600ok.jpeg"
+                },
+                {
+                  "id": 3,
+                  "thumbnail_image": "/images/002/thumb/mp2_blue-orange_600x600ok.webp",
+                  "image": "/images/002/mp2_blue-orange_600x600ok.jpeg"
+                },
+                {
+                  "id": 4,
+                  "thumbnail_image": "/images/002/thumb/apio6pqhr__94507.1582558796.jpg",
+                  "image": "/images/002/apio6pqhr__94507.1582558796 (1).jpg"
+                }
+              ]
+            },
+            {
+              "id": 3002,
+              "name": "wiórowy",
+              "thumbnail_image": "/images/003/thumb/01-img_6297_rev1_600x600.webp",
+              "image": "/images/003/01-img_6297_rev1_600x600.jpeg",
+              "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non possimus asperiores fugit accusamus odio.",
+              "images": [
+                {
+                  "id": 0,
+                  "thumbnail_image": "/images/003/thumb/01-img_6297_rev1_600x600.webp",
+                  "image": "/images/003/01-img_6297_rev1_600x600.jpeg"
+                },
+                {
+                  "id": 1,
+                  "thumbnail_image": "/images/003/thumb/03-img_6347_rev1_600x600.webp",
+                  "image": "/images/003/03-img_6347_rev1_600x600.jpeg"
+                },
+                {
+                  "id": 2,
+                  "thumbnail_image": "/images/003/thumb/04-img_6419_rev1_600x600.webp",
+                  "image": "/images/003/04-img_6419_rev1_600x600.jpeg"
+                },
+                {
+                  "id": 3,
+                  "thumbnail_image": "/images/003/thumb/usa_boltedpalletracking2.jpeg",
+                  "image": "/images/003/usa_boltedpalletracking2.jpeg"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "type": "zaczepowy",
+          "type_continued": null,
+          "description": "Naszymi regałami zaczepisz się o wszystko. Trzymają się lepiej niz rzep psiej (...).",
+          "thumbnail_image": "/images/landscape/sikai-gu-vzdFzNNgt1k-unsplash.jpeg",
+          "thumbnail_portrait": "/images/portrait/jake-nebov-w9yUy-3Dhlw-unsplash.jpeg",
+          "product_list": [
+            {
+              "id": 2000,
+              "name": "ciężki",
+              "thumbnail_image": "/images/001/bulk-rack-unit-no-decking_1.jpeg",
+              "image": "/images/001/bulk-rack-unit-no-decking_1.jpeg",
+              "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non possimus asperiores fugit accusamus odio.",
+              "images": [
+                {
+                  "id": 0,
+                  "thumbnail_image": "/images/001/bulk-rack-unit-no-decking_1.jpeg",
+                  "image": "/images/001/bulk-rack-unit-no-decking_1.jpeg"
+                },
+                {
+                  "id": 1,
+                  "thumbnail_image": "/images/001/02-bulk-frame-diagonal.webp",
+                  "image": "/images/001/02-bulk-frame-diagonal.webp"
+                },
+                {
+                  "id": 2,
+                  "thumbnail_image": "/images/001/03-bulk-beam-connection.webp",
+                  "image": "/images/001/03-bulk-beam-connection.webp"
+                },
+                {
+                  "id": 3,
+                  "thumbnail_image": "/images/001/04-bulk-safety-pin.webp",
+                  "image": "/images/001/04-bulk-safety-pin.webp"
+                }
+              ]
+            },
+            {
+              "id": 2001,
+              "name": "metalowy",
+              "thumbnail_image": "/images/002/thumb/mp2_shelving_unit_particle_board_gray_600px.webp",
+              "image": "/images/002/mp2_shelving_unit_particle_board_gray_600px.webp",
+              "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non possimus asperiores fugit accusamus odio.",
+              "images": [
+                {
+                  "id": 0,
+                  "thumbnail_image": "/images/002/thumb/mp2_shelving_unit_particle_board_gray_600px.webp",
+                  "image": "/images/002/mp2_shelving_unit_particle_board_gray_600px.webp"
+                },
+                {
+                  "id": 1,
+                  "thumbnail_image": "/images/002/thumb/mp2_full-unit-blue-and-orange-2_600x600ok.jpeg",
+                  "image": "/images/002/mp2_full-unit-blue-and-orange-2_600x600ok.jpeg"
+                },
+                {
+                  "id": 3,
+                  "thumbnail_image": "/images/002/thumb/mp2_blue-orange_600x600ok.webp",
+                  "image": "/images/002/mp2_blue-orange_600x600ok.jpeg"
+                },
+                {
+                  "id": 4,
+                  "thumbnail_image": "/images/002/thumb/apio6pqhr__94507.1582558796.jpg",
+                  "image": "/images/002/apio6pqhr__94507.1582558796 (1).jpg"
+                }
+              ]
+            },
+            {
+              "id": 2002,
+              "name": "wiórowy",
+              "thumbnail_image": "/images/003/thumb/01-img_6297_rev1_600x600.webp",
+              "image": "/images/003/01-img_6297_rev1_600x600.jpeg",
+              "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non possimus asperiores fugit accusamus odio.",
+              "images": [
+                {
+                  "id": 0,
+                  "thumbnail_image": "/images/003/thumb/01-img_6297_rev1_600x600.webp",
+                  "image": "/images/003/01-img_6297_rev1_600x600.jpeg"
+                },
+                {
+                  "id": 1,
+                  "thumbnail_image": "/images/003/thumb/03-img_6347_rev1_600x600.webp",
+                  "image": "/images/003/03-img_6347_rev1_600x600.jpeg"
+                },
+                {
+                  "id": 2,
+                  "thumbnail_image": "/images/003/thumb/04-img_6419_rev1_600x600.webp",
+                  "image": "/images/003/04-img_6419_rev1_600x600.jpeg"
+                },
+                {
+                  "id": 3,
+                  "thumbnail_image": "/images/003/thumb/usa_boltedpalletracking2.jpeg",
+                  "image": "/images/003/usa_boltedpalletracking2.jpeg"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

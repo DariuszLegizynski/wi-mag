@@ -1,6 +1,6 @@
 <script setup>
 import Hero from '@/components/home/HomeHero.vue'
-// import ProductsPresented from '@/components/home/ProductsPresented.vue'
+import ProductGroups from '@/components/home/ProductGroups.vue'
 // import ProductPros from '@/components/home/ProductPros.vue'
 // import References from '@/components/home/References.vue'
 import Footer from '@/components/AppFooter.vue'
@@ -8,8 +8,8 @@ import Footer from '@/components/AppFooter.vue'
 
 <template>
   <Hero />
-  <!-- <ProductsPresented />
-  <ProductPros />
+  <ProductGroups />
+  <!-- <ProductPros />
   <References /> -->
   <Footer />
 </template>
