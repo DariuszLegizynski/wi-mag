@@ -1,7 +1,29 @@
 @import './_variables.scss';
 @import './_components.scss';
-@import './animations.scss';
+@import './_animations.scss';
 @import './_fonts.scss';
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+									supported by Chrome, Edge, Opera and Firefox */
+}
+
+*::selection {
+  background: $color-secondary;
+}
+
+.sr-only {
+  visibility: hidden;
+  position: absolute;
+  width: 0;
+}
 
 html,
 body {
@@ -55,32 +77,4 @@ i {
 span {
   font-size: $font-size-16;
   line-height: $line-height-24;
-}
-.sr-only {
-  visibility: hidden;
-  position: absolute;
-  width: 0;
-}
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently
-									supported by Chrome, Edge, Opera and Firefox */
-}
-
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-
-*::selection {
-  background: $color-secondary;
 }
