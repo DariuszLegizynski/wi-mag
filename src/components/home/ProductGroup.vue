@@ -3,30 +3,28 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import ScrollParallax from 'vue3-parallax/src/components/ScrollParallax.vue'
 
-import { toRefs } from "vue"
-import db from "../../firebase/firebaseInit"
+  let props = defineProps({
+    title: {
+      type: String,
+      default: ""
+    },
+    productGroup: {
+      type: Array,
+      default: () => []
+    }
+  })
 
-  let props = defineProps(['title', 'productTypes', 'parallaxScrollSpeed'])
-  const { title, productTypes, parallaxScrollSpeed } = toRefs(props)
+  console.log(props.productGroup)
 
   AOS.init()
 
-const getProductTypes = db.collection("productTypes")
-console.log({getProductTypes})
-  // useEffect(() => {
-	// 	db.collection("products").onSnapshot((snapshot) => {
-	// 		showProduct(
-	// 			snapshot.docs.map((doc) => ({
-	// 				id: doc.id,
-	// 				...doc.data(),
-	// 			}))
-	// 		);
-	// 	});
-	// }, []);
 </script>
 
 <template>
-  <section class="product-presented" data-aos="fade-up" data-aos-once="true">
+  <section class="product-presented" data-aos="fade-up" data-aos-once="true"
+  v-for="productType in productGroup.productTypes"
+  :key="productType.id"
+  >
     <div class="product-presented__container">
       <div class="product-presented__img-wrapper">
         <ScrollParallax
@@ -35,7 +33,7 @@ console.log({getProductTypes})
           :speed="parallaxScrollSpeed"
         >
           <img
-            src="/images/portrait/jake-nebov-NmwnjkukM80-unsplash.jpeg"
+            :src="productType.thumbnail_portrait"
             alt="some racks"
             loading="lazy"
           />
@@ -43,25 +41,23 @@ console.log({getProductTypes})
       </div>
     </div>
     <h3 class="product-presented__title product-presented__title">
-      {{ title }} {{ productTypes.type }}
+      {{ title }} {{ productType.type }}
     </h3>
     <h3
-      v-if="productTypes.type_continued"
+      v-if="productType.type_continued"
       class="product-presented__title product-presented__title--lower"
     >
-      {{ productTypes.type_continued }}
+      {{ productType.type_continued }}
     </h3>
     <p class="product-presented__content">
-      Najlepsza, zimnowalcowana blacha DC01. Zastosowane specjalne malowanie
-      proszkowe. Skręcane ręcznie dobieranymi śrubami 6x12mm. Pokryta doskonałej
-      jakości popielem RAL7035.
+      {{ productType.description }}
     </p>
-    <RouterLink :to="`/offer/product/${productTypes.id}`">
+    <!-- <RouterLink :to="`/offer/product/${productType.id}`">
       <button class="btn btn--link">
         Zobacz
         <IconItem type="arrow-right" />
       </button>
-    </RouterLink>
+    </RouterLink> -->
   </section>
 </template>
 
@@ -75,7 +71,7 @@ console.log({getProductTypes})
     width: 100%;
     overflow: hidden;
     margin: 0 0 0.75rem;
-    padding: 0 0 60% 0;
+    padding: 0 0 80% 0;
   }
 
   &__img-wrapper {

@@ -1,13 +1,26 @@
 <script setup>
 import ProductGroup from '@/components/home/ProductGroup.vue'
-import localDataBase from '@/data/data.json'
+import { ref, onMounted } from "vue"
+import { db } from "@/firebase/firebaseInit"
+import { collection, onSnapshot } from 'firebase/firestore'
 
-const limit = 3
+const productGroups = ref([])
 
-const myProducts = () => {
-  if(localDataBase) return localDataBase.products[0]
-  return []
-}
+onMounted(() => {
+  onSnapshot(collection(db, "productTypes"), getProductTypes => {
+  let tempProductTypes = []
+    getProductTypes.forEach(doc => {
+      console.log(doc.id, " => ", doc.data())
+      const productType = {
+        id: doc.data().id,
+        name: doc.data().name,
+        productTypes: doc.data().product_types
+      }
+      tempProductTypes.push(productType)
+    })
+  productGroups.value = tempProductTypes
+  })
+})
 </script>
 
 <template>
@@ -15,11 +28,11 @@ const myProducts = () => {
     <h1>Nasze produkty</h1>
     <section class="products-presented__items">
       <ProductGroup
-        v-for="productTypes in myProducts.product_types.slice(0, limit)"
-        :key="productTypes.id"
-        :parallaxScrollSpeed="-0.1"
-        :title="myProducts.name"
-        :productTypes="productTypes"
+        v-for="productGroup in productGroups"
+        :key="productGroup.id"
+        :title="productGroups.name"
+        :parallaxScrollSpeed="-0.05"
+        :productGroup="productGroup"
       />
     </section>
     <LinkRouter class="btn btn--highlight" to="/offer">
