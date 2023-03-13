@@ -10,7 +10,7 @@ import ScrollParallax from 'vue3-parallax/src/components/ScrollParallax.vue'
     },
     productGroup: {
       type: Array,
-      default: () => []
+      default: () => {}
     }
   })
 
@@ -30,7 +30,7 @@ import ScrollParallax from 'vue3-parallax/src/components/ScrollParallax.vue'
         <ScrollParallax
           class="product-presented__img"
           direction="y"
-          :speed="parallaxScrollSpeed"
+          :speed="-0.1"
         >
           <img
             :src="productType.thumbnail_portrait"
@@ -71,12 +71,12 @@ import ScrollParallax from 'vue3-parallax/src/components/ScrollParallax.vue'
     width: 100%;
     overflow: hidden;
     margin: 0 0 0.75rem;
-    padding: 0 0 80% 0;
+    padding: 0 0 10rem 0;
   }
 
   &__img-wrapper {
     position: absolute;
-    top: 0;
+    top: -20rem;
     left: 0;
     width: 100%;
     height: 100%;

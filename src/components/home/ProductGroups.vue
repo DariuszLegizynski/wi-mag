@@ -31,7 +31,6 @@ onMounted(() => {
         v-for="productGroup in productGroups"
         :key="productGroup.id"
         :title="productGroups.name"
-        :parallaxScrollSpeed="-0.05"
         :productGroup="productGroup"
       />
     </section>
