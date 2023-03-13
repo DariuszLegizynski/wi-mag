@@ -9,12 +9,10 @@ import ScrollParallax from 'vue3-parallax/src/components/ScrollParallax.vue'
       default: ""
     },
     productGroup: {
-      type: Array,
+      type: Object,
       default: () => {}
     }
   })
-
-  console.log(props.productGroup)
 
   AOS.init()
 
@@ -22,7 +20,7 @@ import ScrollParallax from 'vue3-parallax/src/components/ScrollParallax.vue'
 
 <template>
   <section class="product-presented" data-aos="fade-up" data-aos-once="true"
-  v-for="productType in productGroup.productTypes"
+  v-for="productType in props.productGroup.productTypes"
   :key="productType.id"
   >
     <div class="product-presented__container">
@@ -52,12 +50,12 @@ import ScrollParallax from 'vue3-parallax/src/components/ScrollParallax.vue'
     <p class="product-presented__content">
       {{ productType.description }}
     </p>
-    <!-- <RouterLink :to="`/offer/product/${productType.id}`">
+    <RouterLink :to="`/offer/product/${productType.id}`">
       <button class="btn btn--link">
         Zobacz
         <IconItem type="arrow-right" />
       </button>
-    </RouterLink> -->
+    </RouterLink>
   </section>
 </template>
 
@@ -76,7 +74,7 @@ import ScrollParallax from 'vue3-parallax/src/components/ScrollParallax.vue'
 
   &__img-wrapper {
     position: absolute;
-    top: -20rem;
+    top: 0rem;
     left: 0;
     width: 100%;
     height: 100%;

@@ -10,7 +10,6 @@ onMounted(() => {
   onSnapshot(collection(db, "productTypes"), getProductTypes => {
   let tempProductTypes = []
     getProductTypes.forEach(doc => {
-      console.log(doc.id, " => ", doc.data())
       const productType = {
         id: doc.data().id,
         name: doc.data().name,
@@ -34,9 +33,9 @@ onMounted(() => {
         :productGroup="productGroup"
       />
     </section>
-    <LinkRouter class="btn btn--highlight" to="/offer">
+    <RouterLink class="btn btn--highlight" to="/offer">
       Pełna Oferta
-    </LinkRouter>
+    </RouterLink>
   </article>
 </template>
 
