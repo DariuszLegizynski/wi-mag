@@ -4,10 +4,25 @@ import 'aos/dist/aos.css'
 import ScrollParallax from 'vue3-parallax/src/components/ScrollParallax.vue'
 
 import { toRefs } from "vue"
+import db from "../../firebase/firebaseInit"
+
   let props = defineProps(['title', 'productTypes', 'parallaxScrollSpeed'])
   const { title, productTypes, parallaxScrollSpeed } = toRefs(props)
 
   AOS.init()
+
+const getProductTypes = db.collection("productTypes")
+console.log({getProductTypes})
+  // useEffect(() => {
+	// 	db.collection("products").onSnapshot((snapshot) => {
+	// 		showProduct(
+	// 			snapshot.docs.map((doc) => ({
+	// 				id: doc.id,
+	// 				...doc.data(),
+	// 			}))
+	// 		);
+	// 	});
+	// }, []);
 </script>
 
 <template>
@@ -44,14 +59,7 @@ import { toRefs } from "vue"
     <RouterLink :to="`/offer/product/${productTypes.id}`">
       <button class="btn btn--link">
         Zobacz
-        <IconBase
-          viewBox="0 0 24 24"
-          :width="24"
-          :height="24"
-          iconColor="hsl(240, 90%, 27%)"
-        >
-          <IconArrowRight />
-        </IconBase>
+        <IconItem type="arrow-right" />
       </button>
     </RouterLink>
   </section>

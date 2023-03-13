@@ -24,7 +24,7 @@
       <h3>{{ product.name }}</h3>
       <p>{{ product.description }}</p>
       <RouterLink :to="`/offer/product/${product.id}`">
-        <ButtonBase :text="'Więcej'" />
+        Więcej
       </RouterLink>
     </section>
     <ButtonBack />
@@ -33,14 +33,8 @@
 
 <script>
 import productDataBase from '@/data/data.json'
-import ButtonBase from '@/components/base/ButtonBase.vue'
-import ButtonBack from '@/components/base/ButtonBack.vue'
 
 export default {
-  components: {
-    ButtonBase,
-    ButtonBack,
-  },
   data() {
     return {
       selectedImage: 0,
