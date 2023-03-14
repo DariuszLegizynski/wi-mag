@@ -2,7 +2,7 @@
   <ul class="products">
     <h2>{{ category }}</h2>
     <li v-for="product in productCategory" :key="product.id">
-      <ProductOverview :products="product.productList" />
+      <ProductOverview :product="product" />
     </li>
   </ul>
 </template>
@@ -10,26 +10,22 @@
 <script setup>
 import ProductOverview from '@/components/offer/ProductOverview.vue'
 
-import { ref, onMounted } from "vue"
+import { ref, onMounted } from 'vue'
 import { collection, onSnapshot } from 'firebase/firestore'
-import { db } from "@/firebase/firebaseInit"
+import { db } from '@/firebase/firebaseInit'
 
 const productCategory = ref([])
-const category = ref("")
+const category = ref('')
 
 onMounted(() => {
-  onSnapshot(collection(db, "productTypes"), getProductTypes => {
-  let tempProductTypes = []
-    getProductTypes.forEach(doc => {
+  onSnapshot(collection(db, 'productTypes'), (getProductTypes) => {
+    getProductTypes.forEach((doc) => {
       category.value = doc.data().category
-      const product = {
-        productList: doc.data().product_types
-      }
-      tempProductTypes.push(product)
+      productCategory.value.push(doc.data().product_types)
     })
-  productCategory.value = tempProductTypes
   })
 })
+console.log(productCategory)
 </script>
 
 <style lang="scss" scoped>
