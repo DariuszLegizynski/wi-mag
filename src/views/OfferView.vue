@@ -18,7 +18,7 @@ import ProductList from '@/components/offer/ProductList.vue'
         category: 'Contact btn clicked',
         label: 'contact btn was clicked'
       }"
-      class="btn btn--highlight"
+      class="btn btn--highlight flex"
     >
       <IconItem type="arrow-left" />
       Powrót

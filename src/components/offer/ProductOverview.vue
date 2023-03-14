@@ -20,6 +20,7 @@
         <div class="product__thumbnail">
           <img :src="product.thumbnail_image" alt="picture of the product" />
         </div>
+        <button class="btn flex">Wiecej <IconItem type="arrow-right" fill="#070783" /></button>
       </section>
     </RouterLink>
   </div>
