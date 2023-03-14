@@ -1,5 +1,23 @@
+<script setup>
+import { ref, onMounted } from "vue"
+import { collection, onSnapshot } from 'firebase/firestore'
+import { db } from "@/firebase/firebaseInit"
+
+const products = ref([])
+
+onMounted(() => {
+  onSnapshot(collection(db, "products"), getProductTypes => {
+    getProductTypes.forEach(doc => {
+      products.value.push(doc.data())
+    })
+  })
+})
+console.log("products: ", products)
+</script>
+
 <template>
-  <article class="product">
+Product View
+  <!-- <article class="product">
     <section class="product__title">
       <h2>{{ product.category }}</h2>
       <h2>{{ product.type }}</h2>
@@ -28,45 +46,8 @@
         Zapytaj nas
       </button>
     </section>
-    <ButtonBack />
-  </article>
+  </article> -->
 </template>
-
-<script>
-import productsDataBase from '@/data/products.json'
-import ButtonBack from '@/components/base/ButtonBack.vue'
-
-export default {
-
-  data() {
-    return {
-      selectedImage: 0,
-    }
-  },
-  computed: {
-    productId() {
-      return parseInt(this.$route.params.id)
-    },
-    product() {
-      return productsDataBase.products.find(i => i.id === this.productId)
-    },
-    images() {
-      return this.product.images
-    },
-    description() {
-      return this.product.description
-    },
-  },
-  methods: {
-    toggleImg(image) {
-      this.selectedImage = image
-    },
-  },
-  mounted() {
-    this.toggleImg(this.product.images[0].image)
-  },
-}
-</script>
 
 <style lang="scss" scoped>
 .product {
