@@ -13,18 +13,18 @@
         </span>
       </div>
       <div class="hero__call-to-action">
-        <RouterLink
+        <button
           class="btn btn--highlight"
-          to="/home#footer"
+          @click="$router.push('/home#footer')"
         >
           Zapytaj nas
-        </RouterLink>
-        <RouterLink class="btn btn--black" to="/home#footer">
+        </button>
+        <button class="btn btn--black" @click="$router.push('/home#footer')">
           Zapytaj nas
-        </RouterLink>
-        <RouterLink isOffer class="btn" to="/home#products">
+        </button>
+        <button isOffer class="btn" @click="$router.push('/home#products')">
           Nasza oferta
-        </RouterLink>
+        </button>
       </div>
     </section>
   </article>
