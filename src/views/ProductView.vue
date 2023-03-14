@@ -2,6 +2,9 @@
 import { ref, onMounted } from "vue"
 import { collection, onSnapshot } from 'firebase/firestore'
 import { db } from "@/firebase/firebaseInit"
+import { useRoute } from "vue-router"
+
+const route = useRoute()
 
 const products = ref([])
 
@@ -13,10 +16,12 @@ onMounted(() => {
   })
 })
 console.log("products: ", products)
+console.log("route id: ", route.params.id)
 </script>
 
 <template>
 Product View
+{{$route.params.id}}
   <!-- <article class="product">
     <section class="product__title">
       <h2>{{ product.category }}</h2>
