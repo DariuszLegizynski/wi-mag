@@ -1,28 +1,34 @@
 <template>
   <ul class="products">
-    <li v-for="productType in products.product_types" :key="productType.id">
-      <Product :productType="productType" />
+    <li v-for="product in productCategory" :key="product.id">
+      <ProductOverview :products="product.productList" :category="product.category" />
     </li>
   </ul>
 </template>
 
-<script>
-import Product from '@/components/offer/Product.vue'
-import localDataBase from '@/data/data.json'
+<script setup>
+import ProductOverview from '@/components/offer/ProductOverview.vue'
 
-export default {
-  components: {
-    Product,
-  },
-  computed: {
-    products() {
-      return localDataBase.products[0]
-    },
-    productsTitle() {
-      return localDataBase.products[0].name
-    }
-  },
-}
+import { ref, onMounted } from "vue"
+import { collection, onSnapshot } from 'firebase/firestore'
+import { db } from "@/firebase/firebaseInit"
+
+const productCategory = ref([])
+
+onMounted(() => {
+  onSnapshot(collection(db, "productTypes"), getProductTypes => {
+  let tempProductTypes = []
+    getProductTypes.forEach(doc => {
+      const product = {
+        category: doc.data().category,
+        productList: doc.data().product_types
+      }
+      tempProductTypes.push(product)
+    })
+  productCategory.value = tempProductTypes
+  })
+})
+console.log(productCategory)
 </script>
 
 <style lang="scss" scoped>

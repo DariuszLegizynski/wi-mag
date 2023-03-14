@@ -1,3 +1,8 @@
+<script setup>
+import ProductList from '@/components/offer/ProductList.vue'
+
+</script>
+
 <template>
   <article class="offer">
     <div class="offer__title">
@@ -15,21 +20,18 @@
     <div class="offer__container">
       <ProductList />
     </div>
-    <ButtonBack />
+  <RouterLink to="/home"
+      v-track="{
+        category: 'Contact btn clicked',
+        label: 'contact btn was clicked',
+      }"
+      class="btn btn--highlight"
+    >
+      <IconItem type="arrow-left" />
+      Powrót
+    </RouterLink>
   </article>
 </template>
-
-<script>
-import ProductList from '@/components/offer/ProductList.vue'
-import ButtonBack from '@/components/base/ButtonBack.vue'
-
-export default {
-  components: {
-    ProductList,
-    ButtonBack,
-  },
-}
-</script>
 
 <style lang="scss" scoped>
 .offer {

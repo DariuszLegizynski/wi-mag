@@ -37,9 +37,25 @@ import productsDataBase from '@/data/products.json'
 import ButtonBack from '@/components/base/ButtonBack.vue'
 
 export default {
-  components: {
-    ButtonBack,
-  },
+const productList = ref([])
+
+onMounted(() => {
+  onSnapshot(collection(db, "products"), getProducts => {
+  let tempProducts = []
+    getProducts.forEach(doc => {
+      const product = {
+        id: doc.data().id,
+        category: doc.data().category,
+        type: doc.data().type,
+        description: doc.data().description,
+        thumbnail: doc.data().thumbnail_image,
+        images: doc.data().images
+      }
+      tempProducts.push(product)
+    })
+  productList.value = tempProducts
+  })
+})
   data() {
     return {
       selectedImage: 0,
