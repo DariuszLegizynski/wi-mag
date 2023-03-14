@@ -1,7 +1,8 @@
 <template>
   <ul class="products">
+    <h2>{{ category }}</h2>
     <li v-for="product in productCategory" :key="product.id">
-      <ProductOverview :products="product.productList" :category="product.category" />
+      <ProductOverview :products="product.productList" />
     </li>
   </ul>
 </template>
@@ -14,13 +15,14 @@ import { collection, onSnapshot } from 'firebase/firestore'
 import { db } from "@/firebase/firebaseInit"
 
 const productCategory = ref([])
+const category = ref("")
 
 onMounted(() => {
   onSnapshot(collection(db, "productTypes"), getProductTypes => {
   let tempProductTypes = []
     getProductTypes.forEach(doc => {
+      category.value = doc.data().category
       const product = {
-        category: doc.data().category,
         productList: doc.data().product_types
       }
       tempProductTypes.push(product)
@@ -28,7 +30,6 @@ onMounted(() => {
   productCategory.value = tempProductTypes
   })
 })
-console.log(productCategory)
 </script>
 
 <style lang="scss" scoped>
@@ -37,5 +38,11 @@ console.log(productCategory)
   grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
   column-gap: 0.75rem;
   row-gap: 0.75rem;
+  padding: 0rem 0.8rem;
+
+  & > h2 {
+    color: $color-primary;
+    text-transform: capitalize;
+  }
 }
 </style>

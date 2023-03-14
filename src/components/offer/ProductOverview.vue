@@ -4,17 +4,12 @@
       type: Object,
       default: () => {}
     },
-    category: {
-      type: String,
-      default: ""
-    }
   })
 
   console.log(props.products)
 </script>
 
 <template>
-  <h3>{{ category }}</h3>
   <div v-for="product in products" :key="product.id">
     <RouterLink :to="`/offer/product/${product.id}`">
       <section class="product">
@@ -34,9 +29,10 @@
 .product {
   display: grid;
   grid-template-rows: 1fr auto;
-  padding: 1rem 0 0 1rem;
   width: 100%;
   border-bottom: 1px solid $color-grey;
+  padding-bottom: 2rem;
+  margin: 2rem 0;
 
   &__description {
     display: grid;
@@ -62,7 +58,6 @@
   }
 
   &__thumbnail {
-    padding-left: 2rem;
     position:relative;
   }
 }
