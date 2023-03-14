@@ -26,7 +26,7 @@ let isBurgerActive = ref(false)
       >
         O FIRMIE
       </RouterLink>
-      <RouterLink to="/#footer"
+      <RouterLink to="/home#footer"
         class="btn btn--transparent"
       >
         KONTAKT
