@@ -1,5 +1,5 @@
 <script setup>
-import ProductList from '@/components/offer/ProductList.vue'
+import ProductCategories from '@/components/offer/ProductCategories.vue'
 </script>
 
 <template>
@@ -10,7 +10,7 @@ import ProductList from '@/components/offer/ProductList.vue'
     </div>
     <div class="offer__banner"><p>Produkty</p></div>
     <div class="offer__container">
-      <ProductList />
+      <ProductCategories />
     </div>
     <RouterLink
       to="/home"

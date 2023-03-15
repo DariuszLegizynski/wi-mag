@@ -43,7 +43,7 @@
     grid-template-rows: auto auto;
     justify-items: center;
 
-    margin-top: 5.4rem;
+    margin-top: 4.4rem;
   }
 
   &__img {
@@ -74,6 +74,10 @@
     padding: 0 1.6rem;
 
     text-align: center;
+
+    & > h1 {
+      margin: 0.4rem 0 1rem 0;
+    }
   }
 
   &__call-to-action {

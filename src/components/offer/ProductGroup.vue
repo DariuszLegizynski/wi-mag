@@ -1,22 +1,23 @@
 <script setup>
   const props = defineProps({
-    product: {
-      type: Object,
-      default: () => {}
+    products: {
+      type: Array,
+      default: () => []
     },
   })
+  console.log("productGroup: ", props.products)
 </script>
 
 <template>
-  <div v-for="i in product" :key="i.id">
-    <RouterLink :to="`/offer/product/${i.id}`">
+  <div v-for="product in products" :key="product.id">
+    <RouterLink :to="`/offer/product/${product.id}`">
       <section class="product">
         <div class="product__description">
-          <h3>{{ i.type }}</h3>
-          <span>{{ i.description }}</span>
+          <h3>{{ product.name }}</h3>
+          <span>{{ product.description }}</span>
         </div>
         <div class="product__thumbnail">
-          <img :src="i.thumbnail_image" alt="picture of the product" />
+          <img :src="product.thumbnail_image" alt="picture of the product" />
         </div>
         <button class="btn flex">Wiecej <IconItem type="arrow-right" fill="#070783" /></button>
       </section>

@@ -15,13 +15,16 @@ onMounted(() => {
     })
   })
 })
+
+const product = products.value.find(i => i.id === route.params.id)
 console.log("products: ", products)
+console.log("products.id: ", products.value.map(i => i))
 console.log("route id: ", route.params.id)
+console.log("product: ", product)
 </script>
 
 <template>
 Product View
-{{$route.params.id}}
   <!-- <article class="product">
     <section class="product__title">
       <h2>{{ product.category }}</h2>

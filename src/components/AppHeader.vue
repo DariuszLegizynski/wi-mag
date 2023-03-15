@@ -68,8 +68,8 @@ let isBurgerActive = ref(false)
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   .logo {
-    width: 2.4rem;
-    height: 2.4rem;
+    width: 2rem;
+    height: 2rem;
     background-color: $color-primary;
     padding: 0.4rem;
     background-image: url("@/assets/logo/gamiw_logo_white.png");
