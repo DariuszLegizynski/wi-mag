@@ -26,7 +26,6 @@ onMounted(() => {
     })
   })
 })
-console.log("productCategory: ", productCategory)
 </script>
 
 <style lang="scss" scoped>

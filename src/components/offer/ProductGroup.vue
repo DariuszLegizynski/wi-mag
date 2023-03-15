@@ -5,7 +5,6 @@
       default: () => []
     },
   })
-  console.log("productGroup: ", props.products)
 </script>
 
 <template>

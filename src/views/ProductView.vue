@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, computed } from "vue"
+import { ref, onMounted } from "vue"
 import { collection, onSnapshot } from 'firebase/firestore'
 import { db } from "@/firebase/firebaseInit"
 import { useRoute } from "vue-router"
