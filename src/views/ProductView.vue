@@ -1,5 +1,5 @@
 <script setup>
-import { ref, reactive, onMounted, toRaw } from "vue"
+import { ref, onMounted, computed } from "vue"
 import { collection, onSnapshot } from 'firebase/firestore'
 import { db } from "@/firebase/firebaseInit"
 import { useRoute } from "vue-router"
@@ -7,14 +7,14 @@ import { useRoute } from "vue-router"
 const route = useRoute()
 
 const product = ref({})
-
 let selectedImage = ref("")
+
+let indexOfActiveThumbnail = ref(0)
 
 onMounted(() => {
   onSnapshot(collection(db, "products"), getProductTypes => {
     const tempArr = []
     getProductTypes.forEach(doc => {
-      console.log("doc.data(): ", doc.data())
       tempArr.push(doc.data())
     })
     product.value = tempArr.find(i => i.id == route.params.id)
@@ -22,8 +22,9 @@ onMounted(() => {
   })
 })
 
-const toggleImg = image => {
+const toggleImg = (image, thumbnailIndex) => {
   selectedImage.value = image
+  indexOfActiveThumbnail.value = thumbnailIndex
 }
 </script>
 
@@ -43,7 +44,8 @@ const toggleImg = image => {
           :key="image.id"
           :src="image.thumbnail_image"
           alt="image of product"
-          @click="toggleImg(image.image)"
+          @click="toggleImg(image.image, image.id)"
+          :class="{ active: image.id == indexOfActiveThumbnail ? true : false}"
         />
       </div>
     </section>
@@ -102,6 +104,9 @@ const toggleImg = image => {
         &:active,
         &:focus,
         &:hover {
+          border-bottom: 4px solid $color-primary;
+        }
+        &.active {
           border-bottom: 4px solid $color-primary;
         }
       }
