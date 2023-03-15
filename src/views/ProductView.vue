@@ -1,42 +1,45 @@
 <script setup>
-import { ref, onMounted } from "vue"
+import { ref, reactive, onMounted, toRaw } from "vue"
 import { collection, onSnapshot } from 'firebase/firestore'
 import { db } from "@/firebase/firebaseInit"
 import { useRoute } from "vue-router"
 
 const route = useRoute()
 
-const products = ref([])
+const product = ref({})
+
+let selectedImage = ref("")
 
 onMounted(() => {
   onSnapshot(collection(db, "products"), getProductTypes => {
+    const tempArr = []
     getProductTypes.forEach(doc => {
-      products.value.push(doc.data())
+      console.log("doc.data(): ", doc.data())
+      tempArr.push(doc.data())
     })
+    product.value = tempArr.find(i => i.id == route.params.id)
+    selectedImage.value = product.value.images[0].image
   })
 })
 
-const product = products.value.find(i => i.id === route.params.id)
-console.log("products: ", products)
-console.log("products.id: ", products.value.map(i => i))
-console.log("route id: ", route.params.id)
-console.log("product: ", product)
+const toggleImg = image => {
+  selectedImage.value = image
+}
 </script>
 
 <template>
-Product View
-  <!-- <article class="product">
+  <article class="product">
     <section class="product__title">
       <h2>{{ product.category }}</h2>
       <h2>{{ product.type }}</h2>
     </section>
-    <section v-if="images" class="product__gallery">
+    <section v-if="product.images" class="product__gallery">
       <div class="product__gallery--big">
         <img :src="selectedImage" alt="product image" />
       </div>
       <div class="product__gallery--thumbnails">
         <img
-          v-for="image in images"
+          v-for="image in product.images"
           :key="image.id"
           :src="image.thumbnail_image"
           alt="image of product"
@@ -46,7 +49,7 @@ Product View
     </section>
     <section class="product__description">
       <ul>
-        <li v-for="(text, index) in description" :key="index">- {{ text }}</li>
+        <li v-for="(text, index) in product.description" :key="index">- {{ text }}</li>
       </ul>
     </section>
     <section class="product__call-to-action">
@@ -54,7 +57,7 @@ Product View
         Zapytaj nas
       </button>
     </section>
-  </article> -->
+  </article>
 </template>
 
 <style lang="scss" scoped>
