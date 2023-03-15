@@ -1,15 +1,3 @@
-<template>
-  <ul class="products">
-    <li v-for="product in productCategory" :key="product.id">
-      <h1>{{ product.category }}</h1>
-      <div v-for="productType in product.product_types" :key="productType.id">
-        <h2>{{ productType.type }}</h2>
-        <ProductGroup :products="productType.product_list" />
-      </div>
-    </li>
-  </ul>
-</template>
-
 <script setup>
 import ProductGroup from '@/components/offer/ProductGroup.vue'
 
@@ -27,6 +15,17 @@ onMounted(() => {
   })
 })
 </script>
+
+<template>
+  <ul class="products">
+    <li v-for="product in productCategory" :key="product.id">
+      <h1 >{{ product.category }}</h1>
+      <div v-for="productType in product.product_types" :key="productType.id">
+        <ProductGroup :title="productType.type" :products="productType.product_list" />
+      </div>
+    </li>
+  </ul>
+</template>
 
 <style lang="scss" scoped>
 .products {

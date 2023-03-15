@@ -1,14 +1,31 @@
 <script setup>
+import { ref } from 'vue'
+
   const props = defineProps({
     products: {
       type: Array,
       default: () => []
     },
+    title: {
+      type: String,
+      default: ""
+    }
   })
+
+  let showProduct = ref(false)
+  const toggleTitle = () => {
+    console.log(showProduct.value)
+    showProduct.value = !showProduct.value
+  }
 </script>
 
 <template>
-  <div v-for="product in products" :key="product.id">
+  <section class="title" @click="toggleTitle">
+    <h2>{{ title }}</h2>
+    <IconItem v-if="showProduct" type="minus" fill="#070783" />
+    <IconItem v-else type="plus" fill="#070783" />
+  </section>
+  <div v-for="product in products" :key="product.id" class="product-visibility" :class="{ show: showProduct }">
     <RouterLink :to="`/offer/product/${product.id}`">
       <section class="product">
         <div class="product__description">
@@ -25,6 +42,15 @@
 </template>
 
 <style lang="scss" scoped>
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & > h2 {
+    color: $color-primary;
+  }
+}
 .product {
   display: grid;
   grid-template-rows: 1fr auto;
@@ -58,6 +84,14 @@
 
   &__thumbnail {
     position:relative;
+  }
+}
+.product-visibility {
+  height: 0;
+  overflow: hidden;
+
+  &.show {
+    height: auto;
   }
 }
 </style>

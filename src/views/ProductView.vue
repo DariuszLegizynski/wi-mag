@@ -55,9 +55,9 @@ const toggleImg = (image, thumbnailIndex) => {
       </ul>
     </section>
     <section class="product__call-to-action">
-      <button class="btn btn--highlight" @click="$router.push('/home#footer')">
+      <RouterLink to="/home#footer" class="btn btn--highlight">
         Zapytaj nas
-      </button>
+      </RouterLink>
     </section>
   </article>
 </template>
