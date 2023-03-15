@@ -13,6 +13,7 @@ let isBurgerActive = ref(false)
     <RouterLink to="/"
       class="logo"
     >
+    <img src="@/assets/logo/wi-mag_logo_white.png" alt="Wi-Mag logo" />
     </RouterLink>
     <nav>
       <div class="btn sr-only">MENU</div>
@@ -48,7 +49,7 @@ let isBurgerActive = ref(false)
   padding-right: 1rem;
 
   width: 100vw;
-  height: auto;
+  height: 3rem;
 
   z-index: 10;
 
@@ -68,14 +69,12 @@ let isBurgerActive = ref(false)
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   .logo {
-    width: 2rem;
-    height: 2rem;
-    background-color: $color-primary;
-    padding: 0.4rem;
-    background-image: url("@/assets/logo/gamiw_logo_white.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    & > img {
+      width: auto;
+      height: 2.2rem;
+      background-color: $color-primary;
+      padding: 0.4rem;
+    }
   }
   nav {
     display: none;
