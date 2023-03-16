@@ -20,6 +20,8 @@ import { ref } from 'vue'
   const toggleTitle = () => {
     showProduct.value = !showProduct.value
   }
+
+
 </script>
 
 <template>

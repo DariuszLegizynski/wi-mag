@@ -4,21 +4,17 @@ import ProductCategory from '@/components/offer/ProductCategory.vue'
 import { ref, onMounted } from 'vue'
 import { collection, onSnapshot } from 'firebase/firestore'
 import { db } from '@/firebase/firebaseInit'
-// import { useRoute } from "vue-router"
 
 const productCategory = ref([])
+const productId = ref("")
 onMounted(() => {
   onSnapshot(collection(db, 'productTypes'), (getProductTypes) => {
     getProductTypes.forEach((doc) => {
       productCategory.value.push(doc.data())
+      productId.value = location.hash.replace("#", "")
     })
   })
 })
-
-
-// const route = useRoute()
-// console.log(route.params)
-
 </script>
 
 <template>
@@ -26,7 +22,7 @@ onMounted(() => {
     <li v-for="product in productCategory" :key="product.id">
       <h1 id="metalowe">{{ product.category }}</h1>
       <div v-for="productType in product.product_types" :key="productType.id" :id="`${productType.type}`" >
-        <ProductCategory :title="productType.type" :products="productType.product_list" :showCategory="productType.id === productId ? true : false" />
+        <ProductCategory :title="productType.type" :products="productType.product_list" :showCategory="productType.type === productId ? true : false" />
       </div>
     </li>
   </ul>
