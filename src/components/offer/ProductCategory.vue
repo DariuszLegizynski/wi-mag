@@ -14,7 +14,6 @@ import { ref } from 'vue'
 
   let showProduct = ref(false)
   const toggleTitle = () => {
-    console.log(showProduct.value)
     showProduct.value = !showProduct.value
   }
 </script>
