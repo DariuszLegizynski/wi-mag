@@ -1,20 +1,15 @@
+<script setup>
+import AboutUs from '@/components/about/AboutUs.vue'
+import CompanyTeam from '@/components/about/CompanyTeam.vue'
+import CompanyHistory from '@/components/about/CompanyHistory.vue'
+</script>
+
 <template>
   <AboutUs />
-  <Team />
+  <CompanyTeam />
   <CompanyHistory />
 </template>
 
-<script>
-import AboutUs from '@/components/about/AboutUs'
-import Team from '@/components/about/Team'
-import CompanyHistory from '@/components/about/CompanyHistory'
+<script lang="scss">
 
-export default {
-  name: 'App',
-  components: {
-    AboutUs,
-    Team,
-    CompanyHistory,
-  }
-}
 </script>
