@@ -53,7 +53,7 @@ import ScrollParallax from 'vue3-parallax/src/components/ScrollParallax.vue'
     <RouterLink :to="`/offer#products${productType.id}`">
       <button class="btn btn--link">
         Zobacz
-        <IconItem type="arrow-right" />
+        <IconItem type="arrow-right" fill="#070783" />
       </button>
     </RouterLink>
   </section>
