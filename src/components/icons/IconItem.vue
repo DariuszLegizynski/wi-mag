@@ -25,5 +25,7 @@ const { type, width, height, fill } = toRefs(props)
 </template>
 
 <style scoped>
-
+svg {
+  display: flex;
+}
 </style>

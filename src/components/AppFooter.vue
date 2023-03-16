@@ -21,7 +21,7 @@
           <input type="text" placeholder="Imię (wymagane)" required />
         </div>
         <div class="footer__form__item">
-          <input type="text" placeholder="Nazwisko" id="footer" />
+          <input type="text" placeholder="Nazwisko" />
         </div>
         <div class="footer__form__item" ref="test">
           <input type="email" placeholder="E-mail (wymagane)" required />
@@ -34,8 +34,7 @@
           <textarea placeholder="Co chcesz nam przekzać?" required />
         </div>
       </form>
-      <button class="btn btn--highlight"
-      >Wyślij</button>
+      <button class="btn btn--highlight" id="footer">Wyślij</button>
     </section>
   </article>
 </template>
