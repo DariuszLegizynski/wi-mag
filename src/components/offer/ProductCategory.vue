@@ -9,10 +9,14 @@ import { ref } from 'vue'
     title: {
       type: String,
       default: ""
+    },
+    showCategory: {
+      type: Boolean,
+      default: false
     }
   })
 
-  let showProduct = ref(false)
+  let showProduct = ref(props.showCategory)
   const toggleTitle = () => {
     showProduct.value = !showProduct.value
   }

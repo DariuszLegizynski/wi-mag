@@ -23,11 +23,11 @@ const router = createRouter({
       name: 'Offer',
       component: () => import('@/views/OfferView.vue')
     },
-    {
-      path: '/offer/productList/:id/',
-      name: 'productList',
-      component: () => import('@/views/ProductListView.vue')
-    },
+    // {
+    //   path: '/offer/productList/:id/',
+    //   name: 'productList',
+    //   component: () => import('@/views/ProductListView.vue')
+    // },
     {
       path: '/offer/product/:id/',
       name: 'product',
@@ -35,13 +35,18 @@ const router = createRouter({
     }
   ],
   scrollBehavior(to) {
-    if (to.hash) {
-      return {
-        el: to.hash,
-        behavior: 'smooth'
-      }
-    }
-    return { top: 0, left: 0 }
+    console.log("from routers index - hash: ", to)
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (to.hash) {
+          resolve({
+            el: to.hash,
+            behavior: 'smooth'
+          })
+        }
+        // return { top: 0, left: 0 }
+        resolve({ left: 0, top: 0 })
+      }, 200)})
   }
 })
 
