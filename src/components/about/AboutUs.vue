@@ -20,7 +20,7 @@ const toggleDescription = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis eius ipsam est neque
         quibusdam incidunt fugiat aspernatur deleniti.
       </p>
-      <img src="/images/about/pexels-cottonbro-studio-6803523.jpeg" alt="all employees together" />
+      <img src="https://i.imgur.com/vSts7L1l.jpg" alt="all employees together" />
       <span>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus impedit eligendi nisi
         aliquam quibusdam commodi voluptatibus, atque velit dolores. Sequi consequuntur quibusdam

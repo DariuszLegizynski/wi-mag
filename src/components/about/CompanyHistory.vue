@@ -22,7 +22,7 @@ const toggleDescription = () => {
         takie tam.
       </p>
       <img
-        src="/images/about/pexels-pixabay-269077.jpeg"
+        src="https://i.imgur.com/sZ8v3DOl.jpg"
         alt="happy workers cheering"
       />
       <span>
