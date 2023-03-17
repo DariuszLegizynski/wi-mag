@@ -43,12 +43,12 @@ button {
   }
   &--highlight {
     color: $color-white;
-    background-color: $color-highlight;
+    background-color: $color-primary;
   }
   &--highlight-reverse {
-    color: $color-highlight;
+    color: $color-primary;
     background-color: $color-white;
-    border: 2px solid $color-highlight;
+    border: 2px solid $color-primary;
   }
   &--back {
     display: flex;

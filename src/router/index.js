@@ -35,7 +35,6 @@ const router = createRouter({
     }
   ],
   scrollBehavior(to) {
-    console.log("from routers index - hash: ", to)
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         if (to.hash) {
@@ -44,7 +43,6 @@ const router = createRouter({
             behavior: 'smooth'
           })
         }
-        // return { top: 0, left: 0 }
         resolve({ left: 0, top: 0 })
       }, 200)})
   }
