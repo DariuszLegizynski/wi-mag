@@ -19,10 +19,13 @@ const toggleDescription = () => {
     </header>
     <article class="employees" :class="{ showDescription }">
     <Employee
-      imageSrc="/images/about/people/luisa-peter-7Xp9wDCxivc-unsplash.jpeg"
+      imageSrc="https://i.imgur.com/JVTHvCYl.jpg"
     />
     <Employee
-      imageSrc="/images/about/people/pieter-van-noorden-cjSUZMA2iW8-unsplash.jpeg"
+      imageSrc="https://i.imgur.com/06ZFKKwl.jpg"
+    />
+    <Employee
+      imageSrc="https://i.imgur.com/FdcTH8bl.jpg"
     />
     </article>
   </article>
@@ -32,6 +35,7 @@ const toggleDescription = () => {
 .team {
   padding: 1.2rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: $color-white;
 
   h2 {
     color: black;

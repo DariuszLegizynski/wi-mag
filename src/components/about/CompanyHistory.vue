@@ -45,6 +45,7 @@ const toggleDescription = () => {
 .company {
   padding: 1.2rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: $color-white;
 
   h2,
   p,

@@ -1,11 +1,12 @@
 <script setup>
 let props = defineProps({
   imageSrc: {
-  type: String,
+    type: String,
+    default: ""
   },
   title: {
     type: String,
-    default: '',
+    default: "",
   },
 })
 </script>
@@ -17,11 +18,11 @@ let props = defineProps({
       alt="happy workers cheering"
     />
     <h3>
-      Bartłomiej Kinniw
+      Lorem Ipsum
     </h3>
     <span>
-      Dziewczynka od wszystkiego. Posprząta, pozamiata, ugotuje, wyprasuje.
-      Tylko ziemniaków nie obiera (bo nie je).
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Iusto, cupiditate ipsa! Nihil, voluptas.
     </span>
     <p>tel: +48 123 456 789</p>
   </section>
@@ -32,6 +33,7 @@ let props = defineProps({
 <style lang="scss">
 .employee {
   padding:1rem 0;
+  background-color: $color-white;
 
   h2,
   h3,
