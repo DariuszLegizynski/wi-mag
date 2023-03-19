@@ -1,5 +1,5 @@
 <template>
-  <article class="product-pros observer">
+  <article class="product-pros intersection-observer">
     <h2>Postaw na nasze regały:</h2>
     <section class="product-pros__items">
       <div

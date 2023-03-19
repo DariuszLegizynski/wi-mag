@@ -1,5 +1,5 @@
 <template>
-  <article class="footer observer">
+  <article class="footer intersection-observer">
     <section class="footer__section">
       <h1>Skontaktuj się z nami:</h1>
       <div class="footer__section__top">
