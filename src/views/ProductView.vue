@@ -67,7 +67,7 @@ const toggleImg = (image, thumbnailIndex) => {
   margin-top: 6rem;
 
   &__title {
-    margin: 2rem 0.4rem;
+    margin: 0rem 0.4rem;
     text-align: center;
 
     & > * {
@@ -84,7 +84,7 @@ const toggleImg = (image, thumbnailIndex) => {
       & > img {
         object-fit: contain;
         max-height: 50rem;
-        min-height: 24rem;
+        min-height: 16rem;
       }
     }
 
