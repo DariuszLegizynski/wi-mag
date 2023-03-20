@@ -86,6 +86,7 @@ console.log(route.params)
       & > img {
         object-fit: contain;
         max-height: 50rem;
+        min-height: 24rem;
       }
     }
 

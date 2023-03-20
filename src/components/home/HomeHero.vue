@@ -76,7 +76,7 @@
     text-align: center;
 
     & > h1 {
-      margin: 0.4rem 0 1rem 0;
+      margin: 0.4rem 0;
     }
   }
 
