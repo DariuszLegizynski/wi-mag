@@ -65,11 +65,13 @@ const toggleDescription = () => {
     align-items: center;
   }
   .description {
-    height: 0;
+    max-height: 0;
+    transition: max-height 0.25s ease-out;
     overflow: hidden;
   }
   .description.showDescription {
-    height: auto;
+    max-height: 1500px;
+    transition: max-height 0.25s ease-in;
   }
 }
 </style>
