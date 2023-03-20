@@ -27,7 +27,6 @@ const observer = new IntersectionObserver((entries) => {
 onMounted(() => {
   setTimeout(() => {
     elementToWatch.value = document.querySelectorAll('.intersection-observer')
-    console.log(elementToWatch.value)
     elementToWatch.value.forEach((section) => {
       observer.observe(section)
     })
