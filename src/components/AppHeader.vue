@@ -6,32 +6,33 @@ import BaseBurger from '@/components/base/BaseBurger.vue'
 import SideBar from '@/components/base/SideBar.vue'
 
 const isBurgerActive = ref(false)
-const isContrastActive = ref(false)
+const isContrastActive = ref(true)
 
 const elementToWatch = ref('')
-elementToWatch.value = document.querySelectorAll('.intersection-observer')
 
 let options = {
   rootMargin: '0px 0px -95% 0px'
-};
+}
 
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(
-    (entry) => {
-      console.log("entry: ", entry)
-      if (!entry.isIntersecting) {
-        isContrastActive.value = true
-      } else {
-        isContrastActive.value = false
-      }
+  entries.forEach((entry) => {
+    console.log('entry: ', entry)
+    if (!entry.isIntersecting) {
+      isContrastActive.value = true
+    } else {
+      isContrastActive.value = false
     }
-  )
-}, options)
-     
-onMounted(() => {
-  elementToWatch.value.forEach((section) => {
-    observer.observe(section)
   })
+}, options)
+
+onMounted(() => {
+  setTimeout(() => {
+    elementToWatch.value = document.querySelectorAll('.intersection-observer')
+    console.log(elementToWatch.value)
+    elementToWatch.value.forEach((section) => {
+      observer.observe(section)
+    })
+  }, 100)
 })
 
 onUnmounted(() => {
@@ -58,15 +59,9 @@ onUnmounted(() => {
       <RouterLink to="/about" class="btn btn--transparent"> O FIRMIE </RouterLink>
       <RouterLink to="/home#footer" class="btn btn--transparent"> KONTAKT </RouterLink>
     </nav>
-    <BaseBurger
-      @click="isBurgerActive = !isBurgerActive"
-      :active="isBurgerActive"
-    />
+    <BaseBurger @click="isBurgerActive = !isBurgerActive" :active="isBurgerActive" />
   </header>
-  <SideBar
-    @toggle="isBurgerActive = !isBurgerActive"
-    :isBurgerActive="isBurgerActive"
-  />
+  <SideBar @toggle="isBurgerActive = !isBurgerActive" :isBurgerActive="isBurgerActive" />
 </template>
 
 <style lang="scss" scoped>

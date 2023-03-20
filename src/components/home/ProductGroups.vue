@@ -23,7 +23,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <article class="products-presented">
+  <article class="products-presented" id="products">
     <h1>Nasze produkty</h1>
     <section class="products-presented__items">
       <ProductGroup
