@@ -63,7 +63,7 @@ import ProductCategories from '@/components/offer/ProductCategories.vue'
     left: 0;
     height: 100%;
     width: 100%;
-    background-image: url('/images/offer/isis-franca-hsPFuudRg5I-unsplash.jpeg');
+    background-image: url('https://i.imgur.com/JuF6K4Sl.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
