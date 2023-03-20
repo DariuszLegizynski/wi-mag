@@ -18,7 +18,7 @@ import ProductCategories from '@/components/offer/ProductCategories.vue'
         category: 'Contact btn clicked',
         label: 'contact btn was clicked'
       }"
-      class="btn btn--highlight flex"
+      class="btn btn--highlight btn--back flex"
     >
       <IconItem type="arrow-left" />
       Powrót

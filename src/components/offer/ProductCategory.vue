@@ -92,11 +92,13 @@ import { ref } from 'vue'
   }
 }
 .product-visibility {
-  height: 0;
+  max-height: 0;
+    transition: max-height 0.35s ease-out;
   overflow: hidden;
 
   &.show {
-    height: auto;
+    max-height: 1500px;
+    transition: max-height 0.35s ease-in;
   }
 }
 </style>

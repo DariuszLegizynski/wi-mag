@@ -66,8 +66,10 @@ console.log(route.params)
 
 <style lang="scss" scoped>
 .product {
+  margin-top: 6rem;
+
   &__title {
-    margin: 3rem 0.4rem;
+    margin: 2rem 0.4rem;
     text-align: center;
 
     & > * {
@@ -84,6 +86,7 @@ console.log(route.params)
       & > img {
         object-fit: contain;
         max-height: 50rem;
+        min-height: 24rem;
       }
     }
 

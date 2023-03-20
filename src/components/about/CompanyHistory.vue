@@ -17,9 +17,9 @@ const toggleDescription = () => {
     </header>
     <section class="description" :class="{ showDescription }">
       <p>
-        Historia firmy, to przede wszystkim historia naszej rodziny. Opowieść
-        przekazywana z dziada pradziada z całkowitą dbałością o szczegóły. I
-        takie tam.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Id modi debitis aut ea at nihil alias praesentium dolorum enim doloremque.
+        Esse excepturi quos eos quasi odit cupiditate beatae nemo aliquam?
       </p>
       <img
         src="https://i.imgur.com/sZ8v3DOl.jpg"
@@ -65,11 +65,13 @@ const toggleDescription = () => {
     align-items: center;
   }
   .description {
-    height: 0;
+    max-height: 0;
+    transition: max-height 0.25s ease-out;
     overflow: hidden;
   }
   .description.showDescription {
-    height: auto;
+    max-height: 1500px;
+    transition: max-height 0.25s ease-in;
   }
 }
 </style>

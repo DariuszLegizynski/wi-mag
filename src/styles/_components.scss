@@ -30,7 +30,8 @@ button {
   line-height: $line-height-24;
   padding: 0.9rem;
   margin: 0.6rem auto;
-  max-width: 16rem;
+  max-width: 20rem;
+  min-width: 8rem;
   border-radius: 0;
 
   &--black {
@@ -51,12 +52,7 @@ button {
     border: 2px solid $color-primary;
   }
   &--back {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: $font-size-16;
-    line-height: $line-height-16;
-    background-color: inherit;
+    margin: 0;
   }
   &--link {
     display: flex;

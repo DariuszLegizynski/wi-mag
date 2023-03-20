@@ -1,7 +1,10 @@
 <script setup>
-import { toRefs } from "vue"
-  let props = defineProps(['active'])
-  const { active } = toRefs(props)
+let props = defineProps({
+  active: {
+    type: Boolean,
+    default: false
+  }
+})
 </script>
 
 <template>

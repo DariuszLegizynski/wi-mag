@@ -1,37 +1,63 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import { RouterLink } from 'vue-router'
 
-import BaseBurger from "@/components/base/BaseBurger.vue"
-import SideBar from "@/components/base/SideBar.vue"
+import BaseBurger from '@/components/base/BaseBurger.vue'
+import SideBar from '@/components/base/SideBar.vue'
 
-let isBurgerActive = ref(false)
+const isBurgerActive = ref(false)
+const isContrastActive = ref(true)
+
+const elementToWatch = ref('')
+
+let options = {
+  rootMargin: '0px 0px -95% 0px'
+}
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log('entry: ', entry)
+    if (!entry.isIntersecting) {
+      isContrastActive.value = true
+    } else {
+      isContrastActive.value = false
+    }
+  })
+}, options)
+
+onMounted(() => {
+  setTimeout(() => {
+    elementToWatch.value = document.querySelectorAll('.intersection-observer')
+    console.log(elementToWatch.value)
+    elementToWatch.value.forEach((section) => {
+      observer.observe(section)
+    })
+  }, 100)
+})
+
+onUnmounted(() => {
+  elementToWatch.value.forEach((section) => {
+    observer.unobserve(section)
+  })
+})
 </script>
 
 <template>
-  <header class="header fade-in-bg">
-    <RouterLink to="/"
-      class="logo"
-    >
-    <img src="@/assets/logo/wi-mag_logo_white.png" alt="Wi-Mag logo" />
+  <header
+    class="header fade-in-bg"
+    :class="{
+      header__scroll: isContrastActive,
+      header__active: isBurgerActive
+    }"
+  >
+    <RouterLink to="/" class="logo">
+      <img src="@/assets/logo/wi-mag_logo_white.png" alt="Wi-Mag logo" />
     </RouterLink>
     <nav>
       <div class="btn sr-only">MENU</div>
-      <RouterLink to="/offer"
-        class="btn btn--transparent"
-      >
-        OFERTA
-      </RouterLink>
-      <RouterLink to="/about"
-        class="btn btn--transparent"
-      >
-        O FIRMIE
-      </RouterLink>
-      <RouterLink to="/home#footer"
-        class="btn btn--transparent"
-      >
-        KONTAKT
-      </RouterLink>
+      <RouterLink to="/offer" class="btn btn--transparent"> OFERTA </RouterLink>
+      <RouterLink to="/about" class="btn btn--transparent"> O FIRMIE </RouterLink>
+      <RouterLink to="/home#footer" class="btn btn--transparent"> KONTAKT </RouterLink>
     </nav>
     <BaseBurger @click="isBurgerActive = !isBurgerActive" :active="isBurgerActive" />
   </header>
