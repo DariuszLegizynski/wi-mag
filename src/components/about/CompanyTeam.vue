@@ -53,7 +53,7 @@ const toggleDescription = () => {
     overflow: hidden;
   }
   .employees.showDescription {
-    max-height: 1500px;
+    max-height: 300rem;
     transition: max-height 0.25s ease-in;
   }
 }

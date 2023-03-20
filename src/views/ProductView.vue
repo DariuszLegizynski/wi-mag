@@ -26,8 +26,6 @@ const toggleImg = (image, thumbnailIndex) => {
   selectedImage.value = image
   indexOfActiveThumbnail.value = thumbnailIndex
 }
-
-console.log(route.params)
 </script>
 
 <template>

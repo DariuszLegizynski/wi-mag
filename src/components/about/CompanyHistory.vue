@@ -70,7 +70,7 @@ const toggleDescription = () => {
     overflow: hidden;
   }
   .description.showDescription {
-    max-height: 1500px;
+    max-height: 150rem;
     transition: max-height 0.25s ease-in;
   }
 }
