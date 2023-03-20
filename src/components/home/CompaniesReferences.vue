@@ -11,7 +11,7 @@ import 'aos/dist/aos.css'
     <section class="references__companies">
       <img
         class="references__logo"
-        src="/images/logo/Ikea_logo.svg"
+        src="https://i.imgur.com/4kVHNDQm.png"
         alt="logo of ikea"
         data-aos="fade-up"
         data-aos-easing="ease-in-sine"
@@ -19,7 +19,7 @@ import 'aos/dist/aos.css'
       />
       <img
         class="references__logo"
-        src="/images/logo/Leroy_Merlin.svg"
+        src="https://i.imgur.com/Zsd6M0Xm.png"
         alt="logo Leroy Merlin"
         data-aos="fade-up"
         data-aos-easing="ease-in-sine"
@@ -27,7 +27,7 @@ import 'aos/dist/aos.css'
       />
       <img
         class="references__logo logo--mrowka"
-        src="/images/logo/PSB-Mrowka.png"
+        src="https://i.imgur.com/fygekIEm.png"
         alt="logo PSB Mrowka"
         data-aos="fade-up"
         data-aos-easing="ease-in-sine"
@@ -35,7 +35,7 @@ import 'aos/dist/aos.css'
       />
       <img
         class="references__logo"
-        src="/images/logo/Castorama_Logo.svg"
+        src="https://i.imgur.com/gzgI9Uxm.jpg"
         alt="logo Castorama"
         data-aos="fade-up"
         data-aos-easing="ease-in-sine"
@@ -43,7 +43,7 @@ import 'aos/dist/aos.css'
       />
       <img
         class="references__logo"
-        src="/images/logo/bricoman_logo_3.png"
+        src="https://i.imgur.com/BwK5Gt4m.png"
         alt="logo Bricoman"
         data-aos="fade-up"
         data-aos-easing="ease-in-sine"

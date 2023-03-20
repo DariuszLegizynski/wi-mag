@@ -16,7 +16,6 @@ let options = {
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    console.log('entry: ', entry)
     if (!entry.isIntersecting) {
       isContrastActive.value = true
     } else {
