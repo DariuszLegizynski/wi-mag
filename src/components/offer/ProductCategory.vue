@@ -50,6 +50,9 @@ const toggleTitle = () => {
 </template>
 
 <style lang="scss" scoped>
+a {
+  display: grid;
+}
 .title {
   display: grid;
   grid-template-columns: min(12rem) auto;
@@ -66,7 +69,6 @@ const toggleTitle = () => {
   border-bottom: 1px solid $color-grey;
   padding-bottom: 2rem;
   margin: 2rem 0;
-  min-height: 32rem;
 
   &__description {
     display: grid;
@@ -92,6 +94,7 @@ const toggleTitle = () => {
   }
 }
 .product-visibility {
+  display: grid;
   max-height: 0;
   transition: max-height 0.35s ease-out;
   overflow: hidden;
