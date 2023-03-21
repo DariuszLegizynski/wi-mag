@@ -74,4 +74,43 @@ const toggleDescription = () => {
     transition: max-height 0.25s ease-in;
   }
 }
+
+@media (min-width: 480px) {
+  .company {
+    .description {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 1rem;
+
+      justify-items: center;
+      align-items: center;
+
+      span {
+        grid-column-start: span 2;
+      }
+
+      img {
+        max-height: 32rem;
+        width: auto;
+      }
+    }
+
+    .title {
+      grid-column-start: span 3;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .company {
+    .description {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 1rem;
+    }
+    .title {
+      grid-column-start: span 3;
+    }
+  }
+}
 </style>

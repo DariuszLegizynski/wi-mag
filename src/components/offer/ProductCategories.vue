@@ -57,7 +57,7 @@ onMounted(() => {
   .products {
     &__item {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: 1fr 1fr;
       column-gap: 1rem;
     }
   }
@@ -67,7 +67,7 @@ onMounted(() => {
   .products {
     &__item {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       column-gap: 1rem;
     }
   }
