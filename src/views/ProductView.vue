@@ -1,23 +1,23 @@
 <script setup>
-import { ref, onMounted } from "vue"
+import { ref, onMounted } from 'vue'
 import { collection, onSnapshot } from 'firebase/firestore'
-import { db } from "@/firebase/firebaseInit"
-import { useRoute } from "vue-router"
+import { db } from '@/firebase/firebaseInit'
+import { useRoute } from 'vue-router'
 
 const route = useRoute()
 
 const product = ref({})
-let selectedImage = ref("")
+let selectedImage = ref('')
 
 let indexOfActiveThumbnail = ref(0)
 
 onMounted(() => {
-  onSnapshot(collection(db, "products"), getProductTypes => {
+  onSnapshot(collection(db, 'products'), (getProductTypes) => {
     const tempArr = []
-    getProductTypes.forEach(doc => {
+    getProductTypes.forEach((doc) => {
       tempArr.push(doc.data())
     })
-    product.value = tempArr.find(i => i.id == route.params.id)
+    product.value = tempArr.find((i) => i.id == route.params.id)
     selectedImage.value = product.value.images[0].image
   })
 })
@@ -45,7 +45,7 @@ const toggleImg = (image, thumbnailIndex) => {
           :src="image.thumbnail_image"
           alt="image of product"
           @click="toggleImg(image.image, image.id)"
-          :class="{ active: image.id == indexOfActiveThumbnail ? true : false}"
+          :class="{ active: image.id == indexOfActiveThumbnail ? true : false }"
         />
       </div>
     </section>
@@ -55,9 +55,7 @@ const toggleImg = (image, thumbnailIndex) => {
       </ul>
     </section>
     <section class="product__call-to-action">
-      <RouterLink to="/home#footer" class="btn btn--highlight">
-        Zapytaj nas
-      </RouterLink>
+      <RouterLink to="/home#footer" class="btn btn--highlight"> Zapytaj nas </RouterLink>
     </section>
   </article>
 </template>
@@ -79,12 +77,13 @@ const toggleImg = (image, thumbnailIndex) => {
   &__gallery {
     display: grid;
     grid-template-rows: auto 1fr;
+    justify-items: center;
+    row-gap: .2rem;
 
     &--big {
+
       & > img {
         object-fit: contain;
-        max-height: 50rem;
-        min-height: 16rem;
       }
     }
 
@@ -94,6 +93,7 @@ const toggleImg = (image, thumbnailIndex) => {
       align-items: center;
       grid-template-columns: repeat(4, 1fr);
       column-gap: 8px;
+      max-width: 80%;
 
       & > img {
         margin: 4px 0;
@@ -133,6 +133,47 @@ const toggleImg = (image, thumbnailIndex) => {
     flex-direction: column;
     align-items: center;
     margin: 0 1rem;
+  }
+}
+
+@media (min-width: 480px) {
+  .product {
+    &__gallery {
+      align-items: start;
+
+      &--big {
+        margin: 0 2rem;
+        min-height: 24rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .product {
+    &__gallery {
+      grid-template-columns: auto auto;
+      align-items: center;
+      grid-template-rows: none;
+      justify-items: start;
+      justify-content: center;
+
+      &--thumbnails {
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: none;
+        justify-content: space-between;
+      }
+    }
+
+    &__description {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      ul {
+        padding: 0 2rem;
+      }
+    }
   }
 }
 </style>
