@@ -1,27 +1,25 @@
 <script setup>
 import { ref } from 'vue'
 
-  const props = defineProps({
-    products: {
-      type: Array,
-      default: () => []
-    },
-    title: {
-      type: String,
-      default: ""
-    },
-    showCategory: {
-      type: Boolean,
-      default: false
-    }
-  })
-
-  let showProduct = ref(props.showCategory)
-  const toggleTitle = () => {
-    showProduct.value = !showProduct.value
+const props = defineProps({
+  products: {
+    type: Array,
+    default: () => []
+  },
+  title: {
+    type: String,
+    default: ''
+  },
+  showCategory: {
+    type: Boolean,
+    default: false
   }
+})
 
-
+let showProduct = ref(props.showCategory)
+const toggleTitle = () => {
+  showProduct.value = !showProduct.value
+}
 </script>
 
 <template>
@@ -30,7 +28,12 @@ import { ref } from 'vue'
     <IconItem v-if="showProduct" type="minus" fill="#070783" />
     <IconItem v-else type="plus" fill="#070783" />
   </section>
-  <div v-for="product in products" :key="product.id" class="product-visibility" :class="{ show: showProduct }">
+  <div
+    v-for="product in products"
+    :key="product.id"
+    class="product-visibility"
+    :class="{ show: showProduct }"
+  >
     <RouterLink :to="`/offer/product/${product.id}`">
       <section class="product">
         <div class="product__description">
@@ -47,10 +50,13 @@ import { ref } from 'vue'
 </template>
 
 <style lang="scss" scoped>
+a {
+  display: grid;
+}
 .title {
-  display: flex;
+  display: grid;
+  grid-template-columns: min(12rem) auto;
   align-items: center;
-  justify-content: space-between;
 
   & > h2 {
     color: $color-primary;
@@ -86,19 +92,37 @@ import { ref } from 'vue'
       line-height: $line-height-30;
     }
   }
-
-  &__thumbnail {
-    position:relative;
-  }
 }
 .product-visibility {
+  display: grid;
   max-height: 0;
-    transition: max-height 0.35s ease-out;
+  transition: max-height 0.35s ease-out;
   overflow: hidden;
 
   &.show {
     max-height: 1500px;
     transition: max-height 0.35s ease-in;
+  }
+}
+
+@media (min-width: 480px) {
+  .title {
+    grid-column-start: span 2;
+  }
+  .product {
+    grid-template-rows: auto 1fr auto;
+
+    &__thumbnail {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .title {
+    grid-column-start: span 3;
   }
 }
 </style>

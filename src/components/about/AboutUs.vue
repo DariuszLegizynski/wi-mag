@@ -10,7 +10,7 @@ const toggleDescription = () => {
 
 <template>
   <article class="about-us">
-    <header @click="toggleDescription">
+    <header @click="toggleDescription" class="title">
       <h2>Siedziba</h2>
       <IconItem v-if="showDescription" type="minus" fill="#070783" />
       <IconItem v-else type="plus" fill="#070783" />
@@ -65,6 +65,45 @@ const toggleDescription = () => {
   .description.showDescription {
     max-height: 150rem;
     transition: max-height 0.25s ease-in;
+  }
+}
+
+@media (min-width: 480px) {
+  .about-us {
+    .description {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 1rem;
+
+      justify-items: center;
+      align-items: center;
+
+      span {
+        grid-column-start: span 2;
+      }
+
+      img {
+        max-height: 32rem;
+        width: auto;
+      }
+    }
+
+    .title {
+      grid-column-start: span 3;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .about-us {
+    .description {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 1rem;
+    }
+    .title {
+      grid-column-start: span 3;
+    }
   }
 }
 </style>
