@@ -197,8 +197,9 @@
     padding-bottom: 2rem;
     background-image: linear-gradient(
         to right,
-        hsl(196 81% 56%) 0 10%,
-        hsl(193 94% 60%) 20% 45%,
+        hsl(197 88% 57%) 0 2%,
+        hsl(193 94% 60%) 15% 20%,
+        hsl(188 95% 62%) 35% 52%,
         $color-white 60% 100%
       );
 

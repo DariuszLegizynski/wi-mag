@@ -42,10 +42,16 @@ onMounted(() => {
   padding: 4rem 1rem;
   background-image: radial-gradient(
         farthest-corner at top left,
-        hsl(196 81% 56%) 0 7%,
-        hsl(193 94% 60%) 15% 32%,
+        hsl(197 88% 57%) 0 3%,
+        hsl(193 94% 60%) 9% 12%,
+        hsl(188 95% 62%) 25% 37%,
         $color-white 42.5% 100%
       );
+
+        //       hsl(197 88% 57%) 0 2%,
+        // hsl(193 94% 60%) 15% 20%,
+        // hsl(188 95% 62%) 35% 52%,
+        // $color-white 60% 100%
 
   & > h1 {
     color: $color-primary;
