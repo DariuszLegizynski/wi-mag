@@ -40,7 +40,12 @@ onMounted(() => {
 <style lang="scss" scoped>
 .products-presented {
   padding: 4rem 1rem;
-  background-color: $color-white;
+  background-image: radial-gradient(
+        farthest-corner at top left,
+        hsl(196 81% 56%) 0 7%,
+        hsl(193 94% 60%) 15% 32%,
+        $color-white 42.5% 100%
+      );
 
   & > h1 {
     color: $color-primary;
