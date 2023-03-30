@@ -194,14 +194,7 @@
 @media only screen and (min-width: 1024px) {
   .hero {
     grid-template-columns: 1fr;
-    padding-bottom: 2rem;
-    background-image: linear-gradient(
-        to right,
-        hsl(197 88% 57%) 0 2%,
-        hsl(193 94% 60%) 15% 20%,
-        hsl(188 95% 62%) 35% 52%,
-        $color-white 60% 100%
-      );
+    background-color: $color-white;
 
     &__img {
       background-image: none,
