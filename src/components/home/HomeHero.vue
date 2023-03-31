@@ -19,7 +19,7 @@
         >
           Zapytaj nas
         </RouterLink>
-        <RouterLink class="btn btn--black" to="/home#footer">
+        <RouterLink class="btn btn--secondary" to="/home#footer">
           Zapytaj nas
         </RouterLink>
         <RouterLink isOffer class="btn" to="/home#products">
@@ -92,7 +92,7 @@
       min-width: 12rem;
     }
 
-    .btn--black {
+    .btn--secondary {
       display: none;
     }
   }
@@ -198,7 +198,6 @@
 
     &__img {
       background-image: none,
-      // none;
         url(https://i.imgur.com/eGOzn4S.png);
       
       background-position: center center;
@@ -225,8 +224,6 @@
         
         font-size: $font-size-34;
         line-height: $line-height-40;
-
-        // background-color: $black-opacity-middle;
       }
 
       & > h1 {
@@ -250,19 +247,16 @@
     }
 
     &__call-to-action {
-      column-gap: 1.2rem;
-      padding: 0 .4rem;
-
-      button {
-        margin-top: 2rem;
-      }
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
 
       .btn--highlight {
         display: none;
       }
 
-      .btn--black {
+      .btn--secondary {
         display: inline-block;
+        grid-column: 3 / 4;
       }
     }
   }
