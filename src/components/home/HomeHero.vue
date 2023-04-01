@@ -33,7 +33,7 @@
 <style lang="scss" scoped>
 .hero {
   display: grid;
-  grid-template-rows: 100vh;
+  height:100vh;
 
   &__body {
     grid-column: 1 / -1;
@@ -195,6 +195,7 @@
   .hero {
     grid-template-columns: 1fr;
     background-color: $color-white;
+    height:150vh;
 
     &__img {
       background-image: none,
