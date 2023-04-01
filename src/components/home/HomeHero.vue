@@ -5,7 +5,7 @@
     <section class="hero__body">
       <div class="hero__text">
         <h3>Pełen zakres usług,<br />produkt pod same drzwi.</h3>
-        <h1><i>Fachowcy</i><br />od regałów.</h1>
+        <h1><i>Fachowcy </i><br />od regałów.</h1>
         <span>
           Maksymalnie wykorzystujemy przestrzeń,<br />
           optymalizujemy koszty,<br />
@@ -234,6 +234,10 @@
         padding-top: 0;
         font-size: $font-size-56;
         line-height: $line-height-60;
+
+        & > br {
+          display: none;
+        }
       }
 
       & > span {
@@ -249,14 +253,21 @@
     &__call-to-action {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
+      margin-top: 4rem;
 
       .btn--highlight {
         display: none;
       }
 
+      .btn {
+        order: 1;
+        grid-column: 3 / 4;
+      }
+
       .btn--secondary {
         display: inline-block;
-        grid-column: 3 / 4;
+        order: 2;
+        grid-column: 4/5;
       }
     }
   }
