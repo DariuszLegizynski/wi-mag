@@ -39,11 +39,12 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .products-presented {
-  padding: 4rem 1rem;
+  padding: 0 1rem 4rem;
   background-color: $color-white;
 
   & > h1 {
     color: $color-primary;
+    margin-top: 0;
   }
 
   &__items {

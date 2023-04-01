@@ -5,7 +5,7 @@
     <section class="hero__body">
       <div class="hero__text">
         <h3>Pełen zakres usług,<br />produkt pod same drzwi.</h3>
-        <h1><i>Fachowcy</i> <br />od regałów.</h1>
+        <h1><i>Fachowcy </i><br />od regałów.</h1>
         <span>
           Maksymalnie wykorzystujemy przestrzeń,<br />
           optymalizujemy koszty,<br />
@@ -19,7 +19,7 @@
         >
           Zapytaj nas
         </RouterLink>
-        <RouterLink class="btn btn--black" to="/home#footer">
+        <RouterLink class="btn btn--secondary" to="/home#footer">
           Zapytaj nas
         </RouterLink>
         <RouterLink isOffer class="btn" to="/home#products">
@@ -92,7 +92,7 @@
       min-width: 12rem;
     }
 
-    .btn--black {
+    .btn--secondary {
       display: none;
     }
   }
@@ -193,40 +193,57 @@
 }
 @media only screen and (min-width: 1024px) {
   .hero {
-    background-color: $color-primary;
-    grid-template-columns: 1fr 1fr;
-
-    &__body {
-      grid-column: 2 / 3;
-      grid-row: 1 / -1;
-
-      margin-top: 0.8rem;
-    }
+    grid-template-columns: 1fr;
+    background-color: $color-white;
 
     &__img {
-      grid-column: 1 / 2;
-      grid-row: 1 / -1;
-
       background-image: none,
-        url(https://i.imgur.com/HBKFqmwl.jpg);
+        url(https://i.imgur.com/eGOzn4S.png);
+      
+      background-position: center center;
+    }
+
+    &__body {
+      display: block;
     }
 
     &__text {
-      padding: 4rem 1.6rem 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto 1fr 1fr;
+      align-items: center;
+
+      padding: 0 1.6rem;
 
       & > h3 {
-        padding-top: 2rem;
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+
+        padding: 1rem;
+        margin: 0;
+        
         font-size: $font-size-34;
-        line-height: $line-height-36;
+        line-height: $line-height-40;
       }
 
       & > h1 {
-        padding-top: 2rem;
+        grid-column: 1 / 3;
+        grid-row: 1 / 1;
+        order: 1;
+
+        padding-top: 0;
         font-size: $font-size-56;
         line-height: $line-height-60;
+
+        & > br {
+          display: none;
+        }
       }
 
       & > span {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+
         padding-top: 2rem;
         font-size: $font-size-20;
         line-height: $line-height-24;
@@ -234,19 +251,23 @@
     }
 
     &__call-to-action {
-      column-gap: 1.2rem;
-      padding: 0 .4rem;
-
-      button {
-        margin-top: 2rem;
-      }
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 4rem;
 
       .btn--highlight {
         display: none;
       }
 
-      .btn--black {
+      .btn {
+        order: 1;
+        grid-column: 3 / 4;
+      }
+
+      .btn--secondary {
         display: inline-block;
+        order: 2;
+        grid-column: 4/5;
       }
     }
   }
