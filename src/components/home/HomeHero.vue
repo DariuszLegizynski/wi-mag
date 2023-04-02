@@ -1,6 +1,5 @@
 <template>
   <article class="hero" id="hero">
-    <section class="hero__img" />
     <!-- <section class="hero__img-landscape" /> -->
     <section class="hero__body">
       <div class="hero__text">
@@ -13,18 +12,9 @@
         </span>
       </div>
       <div class="hero__call-to-action">
-        <RouterLink
-          class="btn btn--highlight"
-          to="/home#footer"
-        >
-          Zapytaj nas
-        </RouterLink>
-        <RouterLink class="btn btn--secondary" to="/home#footer">
-          Zapytaj nas
-        </RouterLink>
-        <RouterLink isOffer class="btn" to="/home#products">
-          Nasza oferta
-        </RouterLink>
+        <RouterLink class="btn btn--highlight" to="/home#footer"> Zapytaj nas </RouterLink>
+        <RouterLink class="btn btn--secondary" to="/home#footer"> Zapytaj nas </RouterLink>
+        <RouterLink isOffer class="btn" to="/home#products"> Nasza oferta </RouterLink>
       </div>
     </section>
   </article>
@@ -33,32 +23,24 @@
 <style lang="scss" scoped>
 .hero {
   display: grid;
-  height:100vh;
+  height: 100vh;
+
+  background-image: linear-gradient(
+      to right bottom,
+      hsla(240, 18%, 3%, 0.8),
+      hsla(240, 18%, 3%, 0.7)
+    ),
+    url(https://i.imgur.com/HBKFqmwl.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   &__body {
-    grid-column: 1 / -1;
-    grid-row: 1 / -1;
-
     display: grid;
     grid-template-rows: auto auto;
     justify-items: center;
 
     margin-top: 4.4rem;
-  }
-
-  &__img {
-    grid-column: 1 / -1;
-    grid-row: 1 / -1;
-
-    background-image: linear-gradient(
-        to right bottom,
-        hsla(240, 18%, 3%, 0.8),
-        hsla(240, 18%, 3%, 0.7)
-      ),
-      url(https://i.imgur.com/HBKFqmwl.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 
   &__img-landscape {
@@ -138,7 +120,6 @@
     }
 
     &__call-to-action {
-
       button {
         width: 100%;
         padding: 1.2rem 0;
@@ -151,10 +132,9 @@
 }
 @media only screen and (min-width: 768px) {
   .hero {
-    grid-template-columns: 1fr;
 
     &__body {
-      margin-top: 4rem;
+      margin-top: 2rem;
     }
 
     &__text {
@@ -193,19 +173,14 @@
 }
 @media only screen and (min-width: 1024px) {
   .hero {
-    grid-template-columns: 1fr;
-    background-color: $color-white;
-    height:150vh;
+    height: 125lvh;
 
-    &__img {
-      background-image: none,
-        url(https://i.imgur.com/eGOzn4S.png);
-      
-      background-position: center center;
-    }
+    background-color: $color-white;
+    background-image: none, url(https://i.imgur.com/eGOzn4S.png);
 
     &__body {
       display: block;
+      margin-top: 6rem;
     }
 
     &__text {
@@ -222,7 +197,7 @@
 
         padding: 1rem;
         margin: 0;
-        
+
         font-size: $font-size-34;
         line-height: $line-height-40;
       }
@@ -270,6 +245,14 @@
         order: 2;
         grid-column: 4/5;
       }
+    }
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .hero {
+    &__body {
+      margin-top: 8rem;
     }
   }
 }
