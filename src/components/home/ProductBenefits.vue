@@ -30,8 +30,8 @@
       >
         <IconItem type="strong" />
         <span>
-          <strong>Sprawdzone produkty</strong> - próby wytrzymałościowe
-          potwierdzają deklarowane obciążenie.
+          <strong>Sprawdzone produkty</strong> - próby wytrzymałościowe potwierdzają deklarowane
+          obciążenie.
         </span>
       </div>
       <div
@@ -41,10 +41,7 @@
         data-aos-once="true"
       >
         <IconItem type="gear" />
-        <span
-          >Proste w<br /><strong>montażu</strong> i
-          <strong>demontażu.</strong></span
-        >
+        <span>Proste w<br /><strong>montażu</strong> i <strong>demontażu.</strong></span>
       </div>
       <div
         class="product-pros__item"
@@ -59,9 +56,7 @@
   </article>
 </template>
 
-<script setup>
-
-</script>
+<script setup></script>
 
 <style lang="scss" scoped>
 .product-pros {
@@ -94,6 +89,10 @@
       color: $color-white;
     }
   }
+
+  &__item > * {
+    font-size: $font-size-20;
+  }
 }
 @media only screen and (min-width: 480px) {
   .product-pros {
@@ -109,7 +108,7 @@
     &__items {
       grid-template-columns: 1fr 1fr 1fr;
     }
-  } 
+  }
 }
 @media (min-width: 1024px) {
   .product-pros {
@@ -122,6 +121,10 @@
     &__items {
       column-gap: 4rem;
       row-gap: 2rem;
+    }
+
+    &__item > * {
+      font-size: $font-size-24;
     }
   }
 }
@@ -137,6 +140,10 @@
       column-gap: 4rem;
       row-gap: 2rem;
     }
+
+    // &__item > * {
+    //   font-size: $font-size-40;
+    // }
   }
 }
 </style>
