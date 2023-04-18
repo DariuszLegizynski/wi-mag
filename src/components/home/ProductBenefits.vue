@@ -140,10 +140,6 @@
       column-gap: 4rem;
       row-gap: 2rem;
     }
-
-    // &__item > * {
-    //   font-size: $font-size-40;
-    // }
   }
 }
 </style>
