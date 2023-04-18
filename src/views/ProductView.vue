@@ -65,7 +65,7 @@ const toggleImg = (image, thumbnailIndex) => {
   margin-top: 6rem;
 
   &__title {
-    margin: 0rem 0.4rem;
+    margin: 0rem 0.4rem 2rem;
     text-align: center;
 
     & > * {

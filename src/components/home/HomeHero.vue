@@ -176,7 +176,7 @@
     height: 125lvh;
 
     background-color: $color-white;
-    background-image: none, url(https://i.imgur.com/eGOzn4S.png);
+    background-image: none, url(https://i.imgur.com/a04DnoM.png);
 
     &__body {
       display: block;
