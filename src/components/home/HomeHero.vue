@@ -254,6 +254,10 @@
     &__body {
       margin-top: 8rem;
     }
+
+    &__text {
+      row-gap: 4rem;
+    }
   }
 }
 </style>

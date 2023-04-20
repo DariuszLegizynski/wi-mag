@@ -12,11 +12,12 @@ onMounted(() => {
     getProductTypes.forEach((doc) => {
       const productType = {
         id: doc.data().id,
-        name: doc.data().name,
+        name: doc.data().category,
         productTypes: doc.data().product_types
       }
       tempProductTypes.push(productType)
     })
+    console.log({tempProductTypes})
     productGroups.value = tempProductTypes
   })
 })

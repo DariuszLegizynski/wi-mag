@@ -8,7 +8,7 @@ a {
   &:hover,
   &:active {
     text-decoration: none;
-    color: inherit;
+    transform: scale(1.05);
   }
 }
 
