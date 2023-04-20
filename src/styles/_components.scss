@@ -8,7 +8,6 @@ a {
   &:hover,
   &:active {
     text-decoration: none;
-    transform: scale(1.05);
   }
 }
 
@@ -72,6 +71,12 @@ button {
   &--transparent {
     background-color: transparent;
     color: $color-white;
+  }
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+    transform: scale(1.05);
   }
 }
 
