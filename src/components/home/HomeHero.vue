@@ -23,24 +23,24 @@
 <style lang="scss" scoped>
 .hero {
   display: grid;
-  height: 100vh;
-
-  background-image: linear-gradient(
-      to right bottom,
-      hsla(240, 18%, 3%, 0.8),
-      hsla(240, 18%, 3%, 0.7)
-    ),
-    url(https://i.imgur.com/HBKFqmwl.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
 
   &__body {
     display: grid;
     grid-template-rows: auto auto;
     justify-items: center;
 
-    margin-top: 4.4rem;
+    height: 100vh;
+    padding-top: 4.4rem;
+
+    background-image: linear-gradient(
+        to right bottom,
+        hsla(240, 18%, 3%, 0.8),
+        hsla(240, 18%, 3%, 0.7)
+      ),
+      url(https://i.imgur.com/HBKFqmwl.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   &__img-landscape {
@@ -132,9 +132,8 @@
 }
 @media only screen and (min-width: 768px) {
   .hero {
-
     &__body {
-      margin-top: 2rem;
+      padding-top: 2rem;
     }
 
     &__text {
@@ -173,14 +172,14 @@
 }
 @media only screen and (min-width: 1024px) {
   .hero {
-    height: 125lvh;
-
-    background-color: $color-white;
-    background-image: none, url(https://i.imgur.com/a04DnoM.png);
-
     &__body {
       display: block;
-      margin-top: 6rem;
+      padding-top: 8rem;
+
+      height: 125lvh;
+
+      background-color: $color-white;
+      background-image: none, url(https://i.imgur.com/a04DnoM.png);
     }
 
     &__text {
@@ -188,6 +187,7 @@
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto 1fr 1fr;
       align-items: center;
+      row-gap: 4rem;
 
       padding: 0 1.6rem;
 
@@ -252,11 +252,10 @@
 @media only screen and (min-width: 1280px) {
   .hero {
     &__body {
-      margin-top: 8rem;
-    }
-
-    &__text {
-      row-gap: 4rem;
+      height: 120lvh;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
   }
 }
