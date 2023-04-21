@@ -17,10 +17,10 @@ onMounted(() => {
       }
       tempProductTypes.push(productType)
     })
-    console.log({tempProductTypes})
     productGroups.value = tempProductTypes
   })
 })
+
 </script>
 
 <template>
@@ -30,7 +30,7 @@ onMounted(() => {
       <ProductGroup
         v-for="productGroup in productGroups"
         :key="productGroup.id"
-        :title="productGroups.name"
+        :title="productGroup.name"
         :productGroup="productGroup"
       />
     </section>
