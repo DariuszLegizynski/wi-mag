@@ -4,24 +4,18 @@ import 'aos/dist/aos.css'
 import ScrollParallax from 'vue3-parallax/src/components/ScrollParallax.vue'
 
   let props = defineProps({
-    title: {
-      type: String,
-      default: ""
-    },
-    productGroup: {
+    product: {
       type: Object,
       default: () => {}
-    }
+    },
   })
-
+console.log(props.product)
   AOS.init()
 
 </script>
 
 <template>
   <section class="product-presented" data-aos="fade-up" data-aos-once="true"
-  v-for="productType in props.productGroup.productTypes"
-  :key="productType.id"
   >
     <div class="product-presented__container">
       <div class="product-presented__img-wrapper">
@@ -31,7 +25,7 @@ import ScrollParallax from 'vue3-parallax/src/components/ScrollParallax.vue'
           :speed="-0.1"
         >
           <img
-            :src="productType.thumbnail_portrait"
+            :src="props.product.thumbnail"
             alt="some racks"
             loading="lazy"
           />
@@ -39,23 +33,17 @@ import ScrollParallax from 'vue3-parallax/src/components/ScrollParallax.vue'
       </div>
     </div>
     <h3 class="product-presented__title product-presented__title">
-      {{ title }} {{ productType.type }}
-    </h3>
-    <h3
-      v-if="productType.type_continued"
-      class="product-presented__title product-presented__title--lower"
-    >
-      {{ productType.type_continued }}
+      {{ props.product.name }}
     </h3>
     <p class="product-presented__content">
-      {{ productType.description }}
+      {{ props.product.description }}
     </p>
-    <RouterLink :to="`/offer#${productType.type}`">
+    <!-- <RouterLink :to="`/offer#${productType.type}`">
       <button class="btn btn--link">
         Zobacz {{productType.type}}
         <IconItem type="arrow-right" fill="#070783" />
       </button>
-    </RouterLink>
+    </RouterLink> -->
   </section>
 </template>
 
