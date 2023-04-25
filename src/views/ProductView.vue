@@ -31,7 +31,6 @@ const toggleImg = (image, thumbnailIndex) => {
 <template>
   <article class="product">
     <section class="product__title">
-      <h2>{{ product.category }}</h2>
       <h2>{{ product.type }}</h2>
     </section>
     <section v-if="product.images" class="product__gallery">
