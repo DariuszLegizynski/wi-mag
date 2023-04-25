@@ -13,6 +13,9 @@ onMounted(() => {
       const productType = {
         id: doc.data().id,
         name: doc.data().name,
+        type: doc.data().type,
+        category: doc.data().category,
+        shelfType: doc.data().shelfType,
         description: doc.data().description,
         construction: doc.data().construction,
         images: doc.data().images,
@@ -48,6 +51,7 @@ onMounted(() => {
   & > h1 {
     color: $color-primary;
     margin-top: 0;
+    font-size: $font-size-36;
   }
 
   &__items {

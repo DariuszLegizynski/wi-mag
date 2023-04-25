@@ -3,47 +3,41 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import ScrollParallax from 'vue3-parallax/src/components/ScrollParallax.vue'
 
-  let props = defineProps({
-    product: {
-      type: Object,
-      default: () => {}
-    },
-  })
+let props = defineProps({
+  product: {
+    type: Object,
+    default: () => {}
+  }
+})
 console.log(props.product)
-  AOS.init()
-
+AOS.init()
 </script>
 
 <template>
-  <section class="product-presented" data-aos="fade-up" data-aos-once="true"
-  >
+  <section class="product-presented" data-aos="fade-up" data-aos-once="true">
     <div class="product-presented__container">
       <div class="product-presented__img-wrapper">
-        <ScrollParallax
-          class="product-presented__img"
-          direction="y"
-          :speed="-0.1"
-        >
-          <img
-            :src="props.product.thumbnail"
-            alt="some racks"
-            loading="lazy"
-          />
+        <ScrollParallax direction="y" :speed="-0.1">
+          <img :src="props.product.thumbnail" alt="some racks" loading="lazy" />
         </ScrollParallax>
       </div>
     </div>
-    <h3 class="product-presented__title product-presented__title">
-      {{ props.product.name }}
-    </h3>
-    <p class="product-presented__content">
-      {{ props.product.description }}
-    </p>
-    <!-- <RouterLink :to="`/offer#${productType.type}`">
+    <h3 class="product-presented__title">{{ props.product.type }}</h3>
+    <p class="product-presented__shelf">{{ props.product.shelfType }}</p>
+    <ul
+      class="product-presented__content"
+      v-for="(text, index) in props.product.description"
+      :key="index"
+    >
+      <li>{{ text }}</li>
+    </ul>
+
+    <RouterLink :to="`/offer/product/${props.product.id}`">
       <button class="btn btn--link">
-        Zobacz {{productType.type}}
+        Zobacz
         <IconItem type="arrow-right" fill="#070783" />
       </button>
-    </RouterLink> -->
+    </RouterLink>
   </section>
 </template>
 
@@ -67,25 +61,42 @@ console.log(props.product)
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+    & img {
+      width: inherit;
+      height: inherit;
+    }
   }
 
   &__title {
-    color: $color-black;
+    color: $color-primary;
     text-align: left;
     font-size: $font-size-24;
-    padding: 0.8rem .6rem;
+    padding: 0.8rem 0.4rem 0rem 0.4rem;
+    margin-bottom: 0.4rem;
+
+    &:first-letter {
+      text-transform: capitalize;
+    }
   }
 
-  &__title--lower {
-    padding: 0rem 1rem 0.8rem 1rem;
+  &__shelf {
+    margin-top: 0;
+    padding: 0 0.6rem;
+    color: $color-primary;
   }
 
   &__content {
-    padding: 0.6rem ;
+    padding: 0 0.6rem;
     color: $color-black;
     font-family: 'Montserrat-Light';
     font-size: $font-size-16;
-    line-height: $line-height-32;
+    line-height: $line-height-16;
+
+    & > li:before {
+      content: '-';
+      margin-right: 0.2rem;
+    }
   }
 
   &__text-wrapper {
