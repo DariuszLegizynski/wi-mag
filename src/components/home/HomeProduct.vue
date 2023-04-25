@@ -9,7 +9,7 @@ let props = defineProps({
     default: () => {}
   }
 })
-console.log(props.product)
+
 AOS.init()
 </script>
 
