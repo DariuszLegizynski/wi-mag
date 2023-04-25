@@ -39,7 +39,6 @@ onMounted(() => {
         :product="product"
       />
     </section>
-    <RouterLink class="btn btn--highlight" to="/offer"> Pełna Oferta </RouterLink>
   </article>
 </template>
 

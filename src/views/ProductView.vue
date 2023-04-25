@@ -61,7 +61,7 @@ const toggleImg = (image, thumbnailIndex) => {
 
 <style lang="scss" scoped>
 .product {
-  margin-top: 6rem;
+  margin-top: 5rem;
 
   &__title {
     margin: 0rem 0.4rem 2rem;

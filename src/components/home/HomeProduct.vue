@@ -69,11 +69,12 @@ AOS.init()
   }
 
   &__title {
+    padding: 0.8rem 0.4rem 0.2rem 0.4rem;
+    margin-bottom: 0.4rem;
+
     color: $color-primary;
     text-align: left;
-    font-size: $font-size-24;
-    padding: 0.8rem 0.4rem 0rem 0.4rem;
-    margin-bottom: 0.4rem;
+    font-size: $font-size-28;
 
     &:first-letter {
       text-transform: capitalize;
@@ -84,6 +85,7 @@ AOS.init()
     margin-top: 0;
     padding: 0 0.6rem;
     color: $color-primary;
+    font-family: 'Montserrat-Medium';
   }
 
   &__content {
