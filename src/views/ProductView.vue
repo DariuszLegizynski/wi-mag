@@ -58,14 +58,18 @@ const toggleImg = (image, thumbnailIndex) => {
           <div>wartość</div>
           <div>jednostka</div>
         </div>
-          <div class="product__table__body">
-            <div class="product__table__row" v-for="entry in product.technicalParameters" :key="entry.id">
-              <div>{{entry.name}}</div>
-              <div>{{entry.symbol}}</div>
-              <div>{{entry.value}}</div>
-              <div>{{entry.unit}}</div>
-            </div>
+        <div class="product__table__body">
+          <div
+            class="product__table__row"
+            v-for="entry in product.technicalParameters"
+            :key="entry.id"
+          >
+            <div>{{ entry.name }}</div>
+            <div>{{ entry.symbol }}</div>
+            <div>{{ entry.value }}</div>
+            <div>{{ entry.unit }}</div>
           </div>
+        </div>
       </div>
     </section>
     <section class="product__description">
@@ -73,6 +77,17 @@ const toggleImg = (image, thumbnailIndex) => {
         <h3>{{ text.name }}</h3>
         <li>{{ text.value }}</li>
       </ul>
+    </section>
+    <section class="product__pdf">
+      <a
+        target="_blank"
+        rel="noreferrer"
+        :href="product.pdfLink"
+        download
+        >
+        <IconItem type="download" fill="#070783" />
+          Pobierz plik PDF
+      </a>
     </section>
     <section class="product__call-to-action">
       <RouterLink to="/home#footer" class="btn btn--highlight"> Zapytaj nas </RouterLink>
@@ -102,11 +117,10 @@ const toggleImg = (image, thumbnailIndex) => {
     display: grid;
     grid-template-rows: auto 1fr;
     justify-items: center;
-    row-gap: .2rem;
+    row-gap: 0.2rem;
     margin-bottom: 2rem;
 
     &--big {
-
       & > img {
         object-fit: contain;
       }
@@ -148,7 +162,7 @@ const toggleImg = (image, thumbnailIndex) => {
     &__row {
       display: grid;
       align-items: center;
-      padding: .4rem .8rem;
+      padding: 0.4rem 0.8rem;
       font-size: $font-size-12;
     }
 
@@ -156,7 +170,7 @@ const toggleImg = (image, thumbnailIndex) => {
       border-bottom: 2px solid $color-primary;
       grid-template-columns: 5rem 3rem 3rem 1rem;
       background-color: $color-secondary;
-      
+
       color: #333;
 
       font-size: $font-size-12;
@@ -177,13 +191,12 @@ const toggleImg = (image, thumbnailIndex) => {
   }
   &__description {
     margin: 1rem 0.4rem;
-    
 
     & h3 {
       color: $color-primary;
       text-transform: capitalize;
-      font-size: $font-size-20;
-      margin: .4rem 0;
+      font-size: $font-size-18;
+      margin: 0.4rem 0;
     }
 
     & > ul {
@@ -205,6 +218,17 @@ const toggleImg = (image, thumbnailIndex) => {
     flex-direction: column;
     align-items: center;
     margin: 0 1rem;
+  }
+  &__pdf {
+    color: $color-primary;
+    margin: 2rem 0;
+
+    & > a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap:.4rem;
+    }
   }
 }
 
