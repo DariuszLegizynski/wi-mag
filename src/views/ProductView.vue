@@ -60,17 +60,18 @@ const toggleImg = (image, thumbnailIndex) => {
         </div>
           <div class="product__table__body">
             <div class="product__table__row" v-for="entry in product.technicalParameters" :key="entry.id">
-              {{entry.name}}
-              {{entry.symbol}}
-              {{entry.value}}
-              {{entry.unit}}
+              <div>{{entry.name}}</div>
+              <div>{{entry.symbol}}</div>
+              <div>{{entry.value}}</div>
+              <div>{{entry.unit}}</div>
             </div>
           </div>
       </div>
     </section>
     <section class="product__description">
-      <ul>
-        <li v-for="(text, index) in product.description" :key="index">- {{ text }}</li>
+      <ul v-for="text in product.construction" :key="text.id">
+        <h3>{{ text.name }}</h3>
+        <li>{{ text.value }}</li>
       </ul>
     </section>
     <section class="product__call-to-action">
@@ -102,6 +103,7 @@ const toggleImg = (image, thumbnailIndex) => {
     grid-template-rows: auto 1fr;
     justify-items: center;
     row-gap: .2rem;
+    margin-bottom: 2rem;
 
     &--big {
 
@@ -140,39 +142,49 @@ const toggleImg = (image, thumbnailIndex) => {
   }
   &__table {
     display: grid;
-    grid-template-rows: 40px 1fr;
+    font-family: 'PublicSans-Regular';
 
     &__header,
     &__row {
       display: grid;
-      grid-template-columns: 200px 1fr 100px 40px;
-      width: 100%;
-      gap: 4px;
-      padding: 8px 16px;
+      align-items: center;
+      padding: .4rem .8rem;
+      font-size: $font-size-12;
     }
 
     &__header {
-      // border-bottom: 2px solid var(--color--primary);
+      border-bottom: 2px solid $color-primary;
+      grid-template-columns: 5rem 3rem 3rem 1rem;
+      background-color: $color-secondary;
       
       color: #333;
 
-      font-size: 16px;
-      line-height: 24px;
-      font-weight: 700;
+      font-size: $font-size-12;
+      line-height: $line-height-24;
+      font-family: 'Montserrat-Bold';
     }
     &__body {
       overflow-y: scroll;
-      background-color: $color-secondary;
+      background-color: $color-white;
     }
     &__row {
+      grid-template-columns: 5.8rem 2.4rem 3.6rem 1rem;
+
       &:nth-child(even) {
-        background: $color-tertiary;
+        background-color: $color-secondary;
       }
     }
   }
   &__description {
-    color: $color-primary;
     margin: 1rem 0.4rem;
+    
+
+    & h3 {
+      color: $color-primary;
+      text-transform: capitalize;
+      font-size: $font-size-20;
+      margin: .4rem 0;
+    }
 
     & > ul {
       border: 2px solid $color-white;
@@ -181,6 +193,11 @@ const toggleImg = (image, thumbnailIndex) => {
 
     & li {
       margin: 0.4rem 0;
+      font-size: $font-size-14;
+    }
+
+    & li::first-letter {
+      text-transform: capitalize;
     }
   }
   &__call-to-action {
