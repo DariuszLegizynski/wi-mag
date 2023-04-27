@@ -92,7 +92,7 @@ const toggleImg = (image, thumbnailIndex) => {
     </section>
     <section class="product__back">
       <IconItem type="arrow-left" fill="#070783" />
-      <RouterLink to="/home#footer" class="btn btn--back">Powrót</RouterLink>
+      <a @click="$router.go(-1)" class="btn btn--back">Powrót</a>
     </section>
   </article>
 </template>

@@ -113,7 +113,6 @@ onUnmounted(() => {
       visibility: visible;
       justify-content: space-around;
       align-items: center;
-      width: 57%;
 
       .btn {
         margin: 0;
