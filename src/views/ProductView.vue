@@ -236,6 +236,10 @@ const toggleImg = (image, thumbnailIndex) => {
     justify-content: center;
 
     padding: 0.9rem;
+
+    & > * {
+      font-size: $font-size-20;
+    }
   }
 }
 
