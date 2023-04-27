@@ -22,8 +22,6 @@ onMounted(() => {
   })
 })
 
-console.log(product)
-
 const toggleImg = (image, thumbnailIndex) => {
   selectedImage.value = image
   indexOfActiveThumbnail.value = thumbnailIndex
@@ -90,7 +88,11 @@ const toggleImg = (image, thumbnailIndex) => {
       </a>
     </section>
     <section class="product__call-to-action">
-      <RouterLink to="/home#footer" class="btn btn--highlight"> Zapytaj nas </RouterLink>
+      <RouterLink to="/home#footer" class="btn btn--highlight">Zapytaj nas</RouterLink>
+    </section>
+    <section class="product__back">
+      <IconItem type="arrow-left" fill="#070783" />
+      <RouterLink to="/home#footer" class="btn btn--back">Powrót</RouterLink>
     </section>
   </article>
 </template>
@@ -171,8 +173,6 @@ const toggleImg = (image, thumbnailIndex) => {
       grid-template-columns: 5rem 3rem 3rem 1rem;
       background-color: $color-secondary;
 
-      color: #333;
-
       font-size: $font-size-12;
       line-height: $line-height-24;
       font-family: 'Montserrat-Bold';
@@ -229,6 +229,13 @@ const toggleImg = (image, thumbnailIndex) => {
       align-items: center;
       column-gap:.4rem;
     }
+  }
+  &__back {
+    display: flex;
+        align-items: center;
+    justify-content: center;
+
+    padding: 0.9rem;
   }
 }
 
