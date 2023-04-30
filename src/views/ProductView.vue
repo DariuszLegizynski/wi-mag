@@ -76,11 +76,11 @@ const toggleImg = (image, thumbnailIndex) => {
     </section>
   </article>
   <section class="product__pdf">
-      <a target="_blank" rel="noreferrer" :href="product.pdfLink" download>
-        <IconItem type="download" fill="#070783" />
-        Pobierz plik PDF
-      </a>
-    </section>
+    <a target="_blank" rel="noreferrer" :href="product.pdfLink" download>
+      <IconItem type="download" fill="#070783" />
+      Pobierz plik PDF
+    </a>
+  </section>
   <section class="product__call-to-action">
     <RouterLink to="/home#footer" class="btn btn--highlight">Zapytaj nas</RouterLink>
   </section>
@@ -93,7 +93,6 @@ const toggleImg = (image, thumbnailIndex) => {
 <style lang="scss" scoped>
 .product {
   margin-top: 5rem;
-  // overflow: hidden;
 
   &__title {
     margin: 0rem 0.4rem 2rem;
@@ -187,7 +186,7 @@ const toggleImg = (image, thumbnailIndex) => {
     }
   }
   &__description {
-    margin: 1rem 0.4rem;
+    margin: 0 0.4rem;
     grid-column-end: 3;
 
     & h3 {
@@ -307,22 +306,22 @@ const toggleImg = (image, thumbnailIndex) => {
       align-self: start;
 
       top: 5rem;
-    //   grid-column-start: span 2;
-    //   grid-template-columns: auto auto;
-    //   align-items: center;
-    //   grid-template-rows: none;
-    //   justify-items: start;
-    //   justify-content: center;
+      //   grid-column-start: span 2;
+      //   grid-template-columns: auto auto;
+      //   align-items: center;
+      //   grid-template-rows: none;
+      //   justify-items: start;
+      //   justify-content: center;
 
       &--big {
         min-height: 15rem;
       }
 
-    //   &--thumbnails {
-    //     grid-template-rows: repeat(4, 1fr);
-    //     grid-template-columns: none;
-    //     justify-content: space-between;
-    //   }
+      //   &--thumbnails {
+      //     grid-template-rows: repeat(4, 1fr);
+      //     grid-template-columns: none;
+      //     justify-content: space-between;
+      //   }
     }
 
     &__table {
@@ -343,6 +342,7 @@ const toggleImg = (image, thumbnailIndex) => {
 
     &__description {
       margin: 1rem 0.4rem;
+      grid-column-end: 3;
 
       & h3 {
         font-size: $font-size-24;
@@ -350,6 +350,33 @@ const toggleImg = (image, thumbnailIndex) => {
 
       & li {
         font-size: $font-size-18;
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .product {
+    grid-template-columns: repeat(3, 1fr);
+
+    &__title {
+      grid-column-start: span 3;
+    }
+
+    &__description {
+      margin: 0 0.4rem;
+      grid-column-end: 4;
+
+      & h3 {
+        font-size: $font-size-24;
+      }
+
+      & li {
+        font-size: $font-size-18;
+      }
+
+      & > ul:first-child {
+        margin: 0;
       }
     }
   }
