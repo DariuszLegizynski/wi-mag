@@ -20,7 +20,7 @@
     }"
   >
     <div class="btn sr-only">MENU</div>
-    <RouterLink to="/offer" @click="toggle()"
+    <RouterLink to="/home#products" @click="toggle()"
       v-track="{
         category: 'Offer btn clicked',
         label: 'offer btn was clicked',

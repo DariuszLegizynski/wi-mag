@@ -53,7 +53,7 @@ onUnmounted(() => {
     </RouterLink>
     <nav>
       <div class="btn sr-only">MENU</div>
-      <RouterLink to="/offer" class="btn btn--transparent"> OFERTA </RouterLink>
+      <RouterLink to="/home#products" class="btn btn--transparent"> OFERTA </RouterLink>
       <RouterLink to="/about" class="btn btn--transparent"> O FIRMIE </RouterLink>
       <RouterLink to="/home#footer" class="btn btn--transparent"> KONTAKT </RouterLink>
     </nav>
@@ -113,7 +113,6 @@ onUnmounted(() => {
       visibility: visible;
       justify-content: space-around;
       align-items: center;
-      width: 57%;
 
       .btn {
         margin: 0;

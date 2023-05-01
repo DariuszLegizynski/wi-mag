@@ -15,7 +15,7 @@
       </div>
     </section>
     <section class="footer__section">
-      <h3>Napisz do nas</h3>
+      <h3>Napisz do nas:</h3>
       <form class="footer__form">
         <div class="footer__form__item">
           <input type="text" placeholder="Imię (wymagane)" required />
@@ -127,6 +127,9 @@
 @media only screen and (min-width: 768px) {
   .footer {
     padding: 2rem 2rem 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: start;
   }
 }
 @media only screen and (min-width: 1024px) {

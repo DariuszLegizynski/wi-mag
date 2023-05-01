@@ -9,4 +9,5 @@ body::after {
 html,
 body {
   font-size: 20px;
+  font-family: 'Montserrat-Regular';
 }

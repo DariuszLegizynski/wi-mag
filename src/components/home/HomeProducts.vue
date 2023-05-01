@@ -1,40 +1,44 @@
 <script setup>
-import ProductGroup from '@/components/home/ProductGroup.vue'
+import HomeProduct from '@/components/home/HomeProduct.vue'
 import { ref, onMounted } from 'vue'
 import { db } from '@/firebase/firebaseInit'
 import { collection, onSnapshot } from 'firebase/firestore'
 
-const productGroups = ref([])
+const products = ref([])
 
 onMounted(() => {
-  onSnapshot(collection(db, 'productTypes'), (getProductTypes) => {
-    let tempProductTypes = []
-    getProductTypes.forEach((doc) => {
+  onSnapshot(collection(db, 'products'), (getProducts) => {
+    let tempProducts = []
+    getProducts.forEach((doc) => {
       const productType = {
         id: doc.data().id,
-        name: doc.data().category,
-        productTypes: doc.data().product_types
+        name: doc.data().name,
+        type: doc.data().type,
+        category: doc.data().category,
+        shelfType: doc.data().shelfType,
+        description: doc.data().description,
+        construction: doc.data().construction,
+        images: doc.data().images,
+        technicalParameters: doc.data().technicalParameters,
+        thumbnail: doc.data().thumbnail_image
       }
-      tempProductTypes.push(productType)
+      tempProducts.push(productType)
     })
-    productGroups.value = tempProductTypes
+    products.value = tempProducts
   })
 })
-
 </script>
 
 <template>
   <article class="products-presented" id="products">
     <h1>Nasze produkty</h1>
     <section class="products-presented__items">
-      <ProductGroup
-        v-for="productGroup in productGroups"
-        :key="productGroup.id"
-        :title="productGroup.name"
-        :productGroup="productGroup"
+      <HomeProduct
+        v-for="product in products"
+        :key="product.id"
+        :product="product"
       />
     </section>
-    <RouterLink class="btn btn--highlight" to="/offer"> Pełna Oferta </RouterLink>
   </article>
 </template>
 
@@ -46,6 +50,7 @@ onMounted(() => {
   & > h1 {
     color: $color-primary;
     margin-top: 0;
+    font-size: $font-size-36;
   }
 
   &__items {
