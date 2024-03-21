@@ -379,6 +379,17 @@ const toggleImg = (image, thumbnailIndex) => {
         margin: 0;
       }
     }
+
+    &__call-to-action {
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+    }
+    &__pdf {
+      margin: 4rem 0;
+    }
+    &__back {
+      margin: 4rem 0;
+    }
   }
 }
 </style>

@@ -2,8 +2,8 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import { RouterLink } from 'vue-router'
 
-import BaseBurger from '@/components/base/BaseBurger.vue'
-import SideBar from '@/components/base/SideBar.vue'
+import BaseBurger from '@/components/Base/BaseBurger.vue'
+import SideBar from '@/components/Base/SideBar.vue'
 
 const isBurgerActive = ref(false)
 const isContrastActive = ref(true)

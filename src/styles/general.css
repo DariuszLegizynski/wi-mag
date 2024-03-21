@@ -1,0 +1,346 @@
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+a:hover, a:active {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: hsl(240, 90%, 27%);
+  background-color: hsl(0, 0%, 96%);
+  font-family: "Montserrat-Medium";
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  padding: 0.9rem;
+  margin: 0.6rem auto;
+  max-width: 20rem;
+  min-width: 8rem;
+  border-radius: 0;
+}
+.btn--black {
+  color: hsl(0, 0%, 96%);
+  background-color: hsl(240, 20%, 3%);
+}
+.btn--reverse {
+  color: hsl(0, 0%, 96%);
+  background-color: hsl(240, 90%, 27%);
+}
+.btn--secondary {
+  color: hsl(0, 0%, 96%);
+  background-color: hsl(204, 91%, 54%);
+}
+.btn--highlight {
+  color: hsl(0, 0%, 96%);
+  background-color: hsl(240, 90%, 27%);
+}
+.btn--highlight-reverse {
+  color: hsl(240, 90%, 27%);
+  background-color: hsl(0, 0%, 96%);
+  border: 2px solid hsl(240, 90%, 27%);
+}
+.btn--back {
+  margin: 0;
+  padding: 0;
+  background-color: inherit;
+  min-width: 6rem;
+}
+.btn--link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem 0;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+.btn--transparent {
+  background-color: transparent;
+  color: hsl(0, 0%, 96%);
+}
+.btn:hover, .btn:active {
+  text-decoration: none;
+  transform: scale(1.05);
+}
+
+img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+input,
+textarea {
+  border: none;
+  text-decoration: none;
+  background-color: transparent;
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: hsl(0, 0%, 96%);
+  opacity: 1;
+}
+input::placeholder,
+textarea::placeholder {
+  color: hsl(0, 0%, 96%);
+  opacity: 1;
+}
+input:focus-visible,
+textarea:focus-visible {
+  outline: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.fade-in-bg {
+  transition: background-color 250ms ease-in;
+}
+
+.fadeInFromLeft {
+  animation-duration: 3s;
+  position: relative;
+  animation: fadeInFromLeft 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInFromLeft {
+  from {
+    right: 100%;
+    opacity: 0;
+  }
+  to {
+    right: 0rem;
+    opacity: 1;
+  }
+}
+.fadeInFromRight {
+  animation-duration: 1s;
+  position: relative;
+  animation: fadeInFromRight 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInFromRight {
+  from {
+    left: 100%;
+    opacity: 0;
+  }
+  to {
+    left: 20%;
+    opacity: 1;
+  }
+}
+.slideIn {
+  animation: slide-in 0.5s forwards;
+  -webkit-animation: slide-in 0.5s forwards;
+}
+
+.slideOut {
+  animation: slide-out 0.5s forwards;
+  -webkit-animation: slide-out 0.5s forwards;
+}
+
+.fadeInFromBottom {
+  animation-duration: 3s;
+  position: relative;
+  animation: fadeInFromBottom 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInFromBottom {
+  from {
+    top: 10rem;
+    opacity: 0;
+  }
+  to {
+    top: 0rem;
+    opacity: 1;
+  }
+}
+@keyframes slide-in {
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes slide-out {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@font-face {
+  font-family: "Montserrat-Bold";
+  font-style: normal;
+  font-weight: normal;
+  font-display: auto;
+  src: local("Montserrat-Bold"), url("/fonts/Montserrat/Montserrat-Bold.ttf") format("opentype");
+}
+@font-face {
+  font-family: "Montserrat-Medium";
+  font-style: normal;
+  font-weight: normal;
+  font-display: auto;
+  src: local("Montserrat-Medium"), url("/fonts/Montserrat/Montserrat-Medium.ttf") format("opentype");
+}
+@font-face {
+  font-family: "Montserrat-Regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: auto;
+  src: local("Montserrat-Regular"), url("/fonts/Montserrat/Montserrat-Regular.ttf") format("opentype");
+}
+@font-face {
+  font-family: "Montserrat-Light";
+  font-style: normal;
+  font-weight: normal;
+  font-display: auto;
+  src: local("Montserrat-Light"), url("/fonts/Montserrat/Montserrat-Light.ttf") format("opentype");
+}
+@font-face {
+  font-family: "PublicSans-Thin";
+  font-style: normal;
+  font-weight: normal;
+  font-display: auto;
+  src: local("PublicSans-Thin"), url("/fonts/PublicSans/PublicSans-Thin.woff2") format("woff2"), url("/fonts/PublicSans/PublicSans-Thin.woff") format("woff");
+}
+@font-face {
+  font-family: "PublicSans-Light";
+  font-style: normal;
+  font-weight: normal;
+  font-display: auto;
+  src: local("PublicSans-Light"), url("/fonts/PublicSans/PublicSans-Light.woff2") format("woff2"), url("/fonts/PublicSans/PublicSans-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "PublicSans-Regular";
+  font-style: normal;
+  font-weight: normal;
+  font-display: auto;
+  src: local("PublicSans-Regular"), url("/fonts/PublicSans/PublicSans-Regular.woff2") format("woff2"), url("/fonts/PublicSans/PublicSans-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "PublicSans-Bold";
+  font-style: bold;
+  font-weight: bold;
+  font-display: auto;
+  src: local("PublicSans-Bold"), url("/fonts/PublicSans/PublicSans-Bold.woff2") format("woff2"), url("/fonts/PublicSans/PublicSans-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "PublicSans-SemiBold";
+  font-style: bold;
+  font-weight: bold;
+  font-display: auto;
+  src: local("PublicSans-SemiBold"), url("/fonts/PublicSans/PublicSans-SemiBold.woff2") format("woff2"), url("/fonts/PublicSans/PublicSans-SemiBold.woff") format("woff");
+}
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */ /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+supported by Chrome, Edge, Opera and Firefox */
+}
+
+*::-moz-selection {
+  background: hsl(225, 100%, 88%);
+}
+
+*::selection {
+  background: hsl(225, 100%, 88%);
+}
+
+.sr-only {
+  visibility: hidden;
+  position: absolute;
+  width: 0;
+}
+
+html,
+body {
+  background-color: hsl(0, 0%, 96%);
+  font-family: "PublicSans-Regular";
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+span {
+  color: hsl(0, 0%, 96%);
+}
+
+h1, h2, h3, h4 {
+  font-family: "Montserrat-Light";
+}
+
+p {
+  font-family: "Montserrat-Light";
+  letter-spacing: 1px;
+}
+
+span {
+  font-family: "Montserrat-Regular";
+}
+
+h1 {
+  font-size: 1.9rem;
+  line-height: 2.2rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  line-height: 1.7rem;
+}
+
+h3 {
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+
+h4 {
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+
+i {
+  font-family: "NotoSerifDisplay-LightItalic";
+}
+
+span {
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}/*# sourceMappingURL=general.css.map */
